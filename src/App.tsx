@@ -5,7 +5,6 @@ import TagFilter from "./components/TagFilter";
 import GlossaryList from "./components/GlossaryList";
 import LinkList from "./components/LinkList";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
 import BackToTop from "./components/BackToTop";
 import { ALL_CATEGORIES, glossary, links } from "./data/data";
 import type { Category } from "./data/types";
@@ -33,7 +32,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <ThemeToggle />
       <section className="hero">
         <Header />
         <SearchBar
