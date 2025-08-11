@@ -62,7 +62,7 @@ export default function GlossaryItem({
       {open && (source || source_url) && (
         <div
           className="muted quote_source"
-          style={{ marginTop: 8, fontSize: 13 }}
+          style={{ marginTop: 13, fontSize: 13 }}
         >
           Source:{" "}
           {source_url ? (

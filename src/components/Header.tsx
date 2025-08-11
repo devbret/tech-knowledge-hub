@@ -3,7 +3,8 @@ export default function Header() {
     <header className="container">
       <h1>Tech Knowledge Hub</h1>
       <p className="muted">
-        Bret Bernhoft's personal glossary and curated links.
+        An evolving collection of Bret Bernhoft's personally curated glossary
+        terms and resource links.
       </p>
     </header>
   );

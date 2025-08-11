@@ -5,6 +5,8 @@ export type Category =
   | "FOSS"
   | "Programming"
   | "Audio"
+  | "Music"
+  | "Other"
   | "OPSEC";
 
 export interface GlossaryEntry {

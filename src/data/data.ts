@@ -8,6 +8,8 @@ export const ALL_CATEGORIES: Category[] = [
   "Programming",
   "Audio",
   "OPSEC",
+  "Music",
+  "Other",
 ];
 
 export const glossary: GlossaryEntry[] = [
@@ -41,6 +43,16 @@ export const glossary: GlossaryEntry[] = [
       "https://www.recordedfuture.com/blog/open-source-intelligence-definition",
     quote:
       "Open source intelligence (OSINT) is the practice of gathering, analyzing, and disseminating information from publicly available sources to address specific intelligence requirements.",
+  },
+  {
+    term: "Overview Effect",
+    definition:
+      "A cognitive and emotional shift in awareness experienced by some astronauts after viewing Earth from space.",
+    category: ["Other"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Overview_effect",
+    quote:
+      "Researchers have characterized the effect as a state of awe with self-transcendent qualities, precipitated by a particularly striking visual stimulus.",
   },
 ];
 
@@ -78,6 +90,19 @@ export const links: LinkEntry[] = [
     description:
       "n8n lets you automate business processes without limits on your logic.",
     category: ["AI", "FOSS", "Programming"],
+  },
+  {
+    title: "Pi-hole",
+    url: "https://pi-hole.net/",
+    description:
+      "Instead of browser plugins or other software on each computer, install Pi-hole in one place and your entire network is protected.",
+    category: ["FOSS", "OPSEC"],
+  },
+  {
+    title: "DOA",
+    url: "https://www.dogsonacid.com/",
+    description: "A drum and bass (DNB) community forum of note.",
+    category: ["Audio", "Music"],
   },
   {
     title: "NotebookLM",
