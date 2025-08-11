@@ -99,6 +99,27 @@ export const links: LinkEntry[] = [
     category: ["FOSS", "OPSEC"],
   },
   {
+    title: "Linux Mint",
+    url: "https://linuxmint.com/",
+    description:
+      "Linux Mint is one of the most popular desktop Linux distributions and used by millions of people.",
+    category: ["FOSS", "Programming"],
+  },
+  {
+    title: "TrueNAS",
+    url: "https://www.truenas.com/",
+    description:
+      "TrueNAS is an award-winning universal data platform used by a majority of Fortune 500 companies.",
+    category: ["FOSS"],
+  },
+  {
+    title: "OPNsense",
+    url: "https://opnsense.org/",
+    description:
+      "An open source, feature rich firewall and routing platform, offering cutting-edge network protection.",
+    category: ["FOSS", "OPSEC"],
+  },
+  {
     title: "DOA",
     url: "https://www.dogsonacid.com/",
     description: "A drum and bass (DNB) community forum of note.",
@@ -110,13 +131,6 @@ export const links: LinkEntry[] = [
     description:
       "An AI-powered research and note-taking assistant that summarizes, explains and answers questions based solely on personal sources.",
     category: ["AI", "OSINT"],
-  },
-  {
-    title: "The Big Blocklist Collection",
-    url: "https://firebog.net/",
-    description:
-      "This collection hopes to help you minimise advertisers, trackers and malicious content using the free and open source utility known as Pi-hole.",
-    category: ["FOSS"],
   },
   {
     title: "Create T3 App",
