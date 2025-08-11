@@ -41,7 +41,7 @@ export default function LinkList({ items, query, categories }: Props) {
 
   return (
     <section className="container">
-      <h2>Favorite Links</h2>
+      <h2>Resource Links</h2>
       {randomized.length === 0 ? (
         <p className="muted">
           No matches. Add links in <code>src/data/data.ts</code>.

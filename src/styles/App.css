@@ -14,7 +14,7 @@
   --radius-pill: 999px;
   --shadow-1: 0 2px 8px rgba(0, 0, 0, 0.12);
   --shadow-2: 0 8px 16px rgba(0, 0, 0, 0.22);
-  --container: 1100px;
+  --container: 1000px;
 
   /* fluid type scale */
   --step-1: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
@@ -76,7 +76,7 @@ canvas {
 .app {
   inline-size: 100%;
   min-block-size: 100dvh;
-  max-inline-size: 800px;
+  max-inline-size: 1000px;
   display: flex;
   flex-direction: column;
 }
@@ -184,7 +184,7 @@ h3 {
 .grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   inline-size: 100%;
 }
 
@@ -280,6 +280,12 @@ h3 {
   .to-top,
   .link-button {
     transition: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 
