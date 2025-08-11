@@ -1,0 +1,264 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  max-width: 800px;
+}
+
+:root {
+  --bg: #0b0c0f;
+  --panel: #12141a;
+  --text: #e7e9ee;
+  --muted: #a0a6b3;
+  --accent: #6ee7ff;
+  --border: #1f2330;
+  --card: #151823;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 10% -10%, #11131a 0%, #0b0c0f 40%)
+    fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial;
+  min-height: 100%;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+header.container {
+  padding: 32px 0 8px;
+}
+h1 {
+  margin: 0;
+  font-size: 43px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+h2 {
+  margin: 28px 0 12px;
+  font-size: 22px;
+}
+h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.muted {
+  color: var(--muted);
+  text-align: center;
+}
+
+.left-aligned {
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+.search {
+  width: 100%;
+  margin: 16px auto 6px auto;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  outline: none;
+}
+.search:focus {
+  border-color: var(--accent);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 4px;
+}
+.tag {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.tag-active {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.tag.clear {
+  opacity: 0.8;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+}
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+.card-title {
+  margin: 0;
+}
+.pill {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #10131a;
+  color: var(--accent);
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: var(--accent);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+footer.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 36px 0 48px;
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+.footer-links a {
+  color: var(--muted);
+  margin-left: 14px;
+}
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+main {
+  flex: 1;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --text: #fff;
+  --muted: #5b6270;
+  --accent: #0ea5e9;
+  --border: #e5e7ef;
+  --card: #ffffff;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 50;
+}
+.theme-btn {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card,
+.tag,
+.theme-btn,
+.to-top,
+.link-button {
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .tag,
+  .theme-btn,
+  .to-top,
+  .link-button {
+    transition: none;
+  }
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.22);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.quote_source {
+  text-align: left;
+}
