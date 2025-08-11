@@ -1,5 +1,5 @@
-import { ChangeEvent, useEffect, useRef } from "react";
-
+import type { ChangeEvent } from "react";
+import { useEffect, useRef } from "react";
 interface Props {
   value: string;
   onChange: (next: string) => void;
