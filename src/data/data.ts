@@ -95,6 +95,13 @@ export const links: LinkEntry[] = [
     category: ["Audio"],
   },
   {
+    title: "Free Geek",
+    url: "https://www.freegeek.org/",
+    description:
+      "Refurbishes donated technology and gives it back to the community at no or low cost to provide the most vulnerable with digital literacy skills to succeed and thrive.",
+    category: ["Hardware", "FOSS"],
+  },
+  {
     title: "Mage",
     url: "https://www.mage.space/",
     description: "Generate images and videos with AI.",
@@ -113,6 +120,13 @@ export const links: LinkEntry[] = [
     description:
       "n8n lets you automate business processes without limits on your logic.",
     category: ["AI", "FOSS", "Programming"],
+  },
+  {
+    title: "Raspberry Pi Foundation",
+    url: "https://www.raspberrypi.org/",
+    description:
+      "A UK-based charity with the mission to enable young people to realise their full potential through the power of computing and digital technologies.",
+    category: ["Hardware"],
   },
   {
     title: "Pi-hole",
