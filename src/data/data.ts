@@ -54,6 +54,17 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Researchers have characterized the effect as a state of awe with self-transcendent qualities, precipitated by a particularly striking visual stimulus.",
   },
+  {
+    term: "Synchronicity",
+    definition:
+      "Meaningful coincidences that are not linked by a clear cause-and-effect relationship which seem connected by their meaning to the observer.",
+    category: ["Other"],
+    source: "International Association for Analytical Psychology",
+    source_url:
+      "https://iaap.org/jung-analytical-psychology/short-articles-on-analytical-psychology/synchronicity-an-acausal-connecting-principle/",
+    quote:
+      "...synchronicity was defined by Jung as an acausal connecting principle, whereby internal, psychological events are linked to external world events by meaningful coincidences rather than causal chains.",
+  },
 ];
 
 export const links: LinkEntry[] = [
