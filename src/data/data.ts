@@ -45,6 +45,17 @@ export const glossary: GlossaryEntry[] = [
       "Open source intelligence (OSINT) is the practice of gathering, analyzing, and disseminating information from publicly available sources to address specific intelligence requirements.",
   },
   {
+    term: "Silicon Lottery",
+    definition:
+      "The natural variation in performance, efficiency and overclocking potential among individual computer chips, even when they are the same model.",
+    category: ["Other"],
+    source: "MUO",
+    source_url:
+      "https://www.makeuseof.com/silicon-lottery-why-no-two-processors-are-the-same/",
+    quote:
+      "...the term silicon lottery refers to the inherent differences between two processors of the same product line. These differences affect overclocking performance.",
+  },
+  {
     term: "Overview Effect",
     definition:
       "A cognitive and emotional shift in awareness experienced by some astronauts after viewing Earth from space.",
