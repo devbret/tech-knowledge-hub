@@ -7,7 +7,8 @@ export type Category =
   | "Audio"
   | "Music"
   | "Other"
-  | "OPSEC";
+  | "OPSEC"
+  | "Hardware";
 
 export interface GlossaryEntry {
   term: string;

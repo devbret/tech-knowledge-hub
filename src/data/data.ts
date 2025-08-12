@@ -10,6 +10,7 @@ export const ALL_CATEGORIES: Category[] = [
   "OPSEC",
   "Music",
   "Other",
+  "Hardware",
 ];
 
 export const glossary: GlossaryEntry[] = [
@@ -48,7 +49,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Silicon Lottery",
     definition:
       "The natural variation in performance, efficiency and overclocking potential among individual computer chips, even when they are the same model.",
-    category: ["Other"],
+    category: ["Hardware"],
     source: "MUO",
     source_url:
       "https://www.makeuseof.com/silicon-lottery-why-no-two-processors-are-the-same/",
