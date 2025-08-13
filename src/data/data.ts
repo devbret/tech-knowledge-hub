@@ -210,4 +210,11 @@ export const links: LinkEntry[] = [
       "This book explains how to build the successor to the nation state, a concept we call the network state.",
     category: ["AI"],
   },
+  {
+    title: "Proxmox",
+    url: "https://www.proxmox.com/",
+    description:
+      "Powerful and efficient open-source software to simplify your server management.",
+    category: ["FOSS"],
+  },
 ];
