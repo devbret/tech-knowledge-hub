@@ -217,4 +217,11 @@ export const links: LinkEntry[] = [
       "Powerful and efficient open-source software to simplify your server management.",
     category: ["FOSS"],
   },
+  {
+    title: "Kubernetes",
+    url: "https://kubernetes.io/",
+    description:
+      "An open source system for automating deployment, scaling, and management of containerized applications.",
+    category: ["FOSS"],
+  },
 ];
