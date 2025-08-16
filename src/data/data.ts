@@ -25,6 +25,38 @@ export const glossary: GlossaryEntry[] = [
       "...process by which potential adversaries can be denied information about capabilities and intentions by identifying, controlling, and protecting generally unclassified evidence of the planning and execution of sensitive activities.",
   },
   {
+    term: "Upskill",
+    definition:
+      "To learn new or improved skills which enhance your ability to perform a job, adapt to changes or advance in your career.",
+    category: ["Other", "Programming"],
+    source: "Stanford Online",
+    source_url: "https://online.stanford.edu/what-upskilling-and-reskilling",
+    quote:
+      "...obtaining  knowledge, expertise, or capabilities related to your current field or industry in order to advance your career or adapt to changes in the job market.",
+  },
+  {
+    term: "Force Multiplier",
+    definition:
+      "Any factor that significantly increases the effectiveness and impact of a group or individual beyond their inherent capabilities.",
+    category: ["Programming"],
+    source: "Effective Altruism",
+    source_url:
+      "https://www.effectivealtruism.org/articles/ea-global-2018-force-multiplication",
+    quote:
+      "...a factor or a combination of factors that dramatically increase the effectiveness of a group, relative to what they'd be able to achieve without these factors.",
+  },
+  {
+    term: "Easter Egg",
+    definition:
+      "An Easter Egg is a hidden feature, message or inside joke intentionally placed within a video game, movie or software for players or users to discover.",
+    category: ["Video Games"],
+    source: "Arizona State University",
+    source_url:
+      "https://gamesandimpact.org/uncategorized/the-cake-is-a-lie-easter-eggs-in-video-games/",
+    quote:
+      "...Easter eggs are the “hidden properties of games that can be revealed by button combinations or by accessing remote areas in the game or on the disc itself,”...",
+  },
+  {
     term: "Techno Optimism",
     definition:
       "The belief that advances in science, engineering and technology will lead to long-term improvements in human life.",
@@ -33,6 +65,17 @@ export const glossary: GlossaryEntry[] = [
     source_url: "https://link.springer.com/article/10.1007/s13347-022-00555-x",
     quote:
       "...the stance that holds that technology plays a key role in ensuring that the good prevails over the bad.",
+  },
+  {
+    term: "Cyberspace",
+    definition:
+      "The global, interconnected digital environment created by computer networks, where information is exchanged, communication occurs and virtual activities take place.",
+    category: ["Programming", "Other"],
+    source: "GeeksforGeeks",
+    source_url:
+      "https://www.geeksforgeeks.org/computer-networks/what-is-cyberspace/",
+    quote:
+      "Cyberspace best describes the immaterial space where interactions through digital networks, the internet and computer systems take place.",
   },
   {
     term: "OSINT",
@@ -76,6 +119,16 @@ export const glossary: GlossaryEntry[] = [
       "https://iaap.org/jung-analytical-psychology/short-articles-on-analytical-psychology/synchronicity-an-acausal-connecting-principle/",
     quote:
       "...synchronicity was defined by Jung as an acausal connecting principle, whereby internal, psychological events are linked to external world events by meaningful coincidences rather than causal chains.",
+  },
+  {
+    term: "Dub Music",
+    definition:
+      "Emerged in 1970s Jamaica from reggae through innovative studio techniques, eventually laying the groundwork for electronic genres, DJ culture and remix aesthetics worldwide.",
+    category: ["Music"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Dub_music",
+    quote:
+      "...dub consists of remixes of existing recordings created by significantly manipulating the original, usually through the removal of vocal parts, emphasis of the rhythm section [...], the application of studio effects such as echo and reverb, and the occasional dubbing of vocal or instrumental snippets from the original version or other works.",
   },
 ];
 
@@ -223,5 +276,12 @@ export const links: LinkEntry[] = [
     description:
       "An open source system for automating deployment, scaling, and management of containerized applications.",
     category: ["FOSS"],
+  },
+  {
+    title: "EFF",
+    url: "https://www.eff.org/",
+    description:
+      "The Electronic Frontier Foundation is the leading nonprofit organization defending civil liberties in the digital world.",
+    category: ["Other"],
   },
 ];
