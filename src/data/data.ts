@@ -11,6 +11,7 @@ export const ALL_CATEGORIES: Category[] = [
   "Music",
   "Other",
   "Hardware",
+  "Biohacking",
 ];
 
 export const glossary: GlossaryEntry[] = [
@@ -129,6 +130,36 @@ export const glossary: GlossaryEntry[] = [
     source_url: "https://en.wikipedia.org/wiki/Dub_music",
     quote:
       "...dub consists of remixes of existing recordings created by significantly manipulating the original, usually through the removal of vocal parts, emphasis of the rhythm section [...], the application of studio effects such as echo and reverb, and the occasional dubbing of vocal or instrumental snippets from the original version or other works.",
+  },
+  {
+    term: "Homelab",
+    definition:
+      "A personal computing environment used to experiment with servers, networking, virtualization and other technologies for learning, testing or self-hosting purposes.",
+    category: ["AI", "Hardware"],
+    source: "Linux Handbook",
+    source_url: "https://linuxhandbook.com/homelab/",
+    quote:
+      "...the name given to a server (or multiple server setup) that resides locally in your home and where you host several applications and virtualized systems for testing and developing or for home and functional usage.",
+  },
+  {
+    term: "Digital Footprint",
+    definition:
+      "The trail of data a person leaves behind through their online activities, including websites visited, posts made and information shared, which can be tracked and analyzed.",
+    category: ["OSINT"],
+    source: "Built In",
+    source_url: "https://builtin.com/articles/digital-footprint",
+    quote:
+      "...includes information you actively share through social media posts, blog profiles and online forms, as well as data companies collect on you through cookies and tracking scripts.",
+  },
+  {
+    term: "Neuroplasticity",
+    definition:
+      "The brain's ability to reorganize and adapt by forming new neural connections throughout life in response to learning, experience or injury.",
+    category: ["Biohacking"],
+    source: "Cleveland Clinic",
+    source_url: "https://health.clevelandclinic.org/neuroplasticity",
+    quote:
+      "...your brain's ability to absorb information and evolve to manage new challenges. It's a natural gift that allows you to develop as a person and take on the ever-changing tasks of daily life.",
   },
 ];
 
@@ -283,5 +314,18 @@ export const links: LinkEntry[] = [
     description:
       "The Electronic Frontier Foundation is the leading nonprofit organization defending civil liberties in the digital world.",
     category: ["Other"],
+  },
+  {
+    title: "Dangerous Things Forum",
+    url: "https://forum.dangerousthings.com/",
+    description: "A place to discuss biohacking, projects, and technology",
+    category: ["Biohacking"],
+  },
+  {
+    title: "Biohacking Forums",
+    url: "https://biohacking.forum/",
+    description:
+      "A forum by the International Biohacking Community for individuals to discuss longevity, biohacking, transhumanism, life extension, cryonics, DIY-biology, and more.",
+    category: ["Biohacking"],
   },
 ];

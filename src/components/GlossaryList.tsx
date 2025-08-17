@@ -43,9 +43,7 @@ export default function GlossaryList({ items, query, categories }: Props) {
     <section className="container">
       <h2>Glossary Terms</h2>
       {randomized.length === 0 ? (
-        <p className="muted">
-          No matches. Add entries in <code>src/data/data.ts</code>.
-        </p>
+        <p className="muted">No matches.</p>
       ) : (
         <div className="grid">
           {randomized.map((g) => (
