@@ -316,3 +316,11 @@ footer.footer {
 .quote_source {
   text-align: left;
 }
+
+.card-accent {
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px var(--border) inset;
+  opacity: 0.95;
+}

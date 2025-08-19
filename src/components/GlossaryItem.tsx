@@ -1,5 +1,19 @@
 import { useState } from "react";
-import type { GlossaryEntry } from "../data/types";
+import type { GlossaryEntry, Category } from "../data/types";
+
+const categoryColors: Record<Category, string> = {
+  OSINT: "#3b82f6",
+  AI: "#a855f7",
+  "Video Games": "#f97316",
+  FOSS: "#10b981",
+  Programming: "#06b6d4",
+  Audio: "#ef4444",
+  Music: "#e879f9",
+  Other: "#9ca3af",
+  OPSEC: "#f59e0b",
+  Hardware: "#22c55e",
+  Biohacking: "#8b5cf6",
+};
 
 function normalizeCategories(
   category: GlossaryEntry["category"] | string | undefined
@@ -25,6 +39,20 @@ export default function GlossaryItem({
   const [open, setOpen] = useState(false);
   const categories = normalizeCategories(category);
 
+  const accentStyle =
+    categories.length > 0
+      ? {
+          background: `linear-gradient(90deg, ${categories
+            .map((cat, i) => {
+              const c = categoryColors[cat as Category] ?? "#9ca3af"; // fallback gray
+              const start = (100 / categories.length) * i;
+              const end = (100 / categories.length) * (i + 1);
+              return `${c} ${start}% ${end}%`;
+            })
+            .join(", ")})`,
+        }
+      : {};
+
   return (
     <article className="card">
       <div className="card-head">
@@ -39,6 +67,8 @@ export default function GlossaryItem({
           </div>
         )}
       </div>
+
+      <div className="card-accent" style={accentStyle} aria-hidden="true" />
 
       <p>{definition}</p>
 
