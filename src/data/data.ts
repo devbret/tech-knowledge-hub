@@ -161,6 +161,38 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...your brain's ability to absorb information and evolve to manage new challenges. It's a natural gift that allows you to develop as a person and take on the ever-changing tasks of daily life.",
   },
+  {
+    term: "Flow State",
+    definition:
+      "A mental condition of complete absorption and effortless focus in an activity, where challenge and skill are perfectly balanced, leading to a loss of self-consciousness and sense of time.",
+    category: ["Biohacking"],
+    source: "Frontiers",
+    source_url:
+      "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.645498/full",
+    quote:
+      "...often associated with athletes, artists, or scientists who are fully task-absorbed in order to achieve peak performance. Yet, flow-like states also occur in more mundane situations, such as when engaging in certain tasks during work or leisure time...",
+  },
+  {
+    term: "Kairos",
+    definition:
+      "The opportune or decisive moment in time when conditions align perfectly for meaningful action or change.",
+    category: ["Other"],
+    source: "Institute For Advanced Study",
+    source_url: "https://www.ias.edu/ideas/baert-kairos",
+    quote:
+      "If, however, a single parameter of the intersection were lacking or out of balance, then the knot would unravel and the occasion would not present itself. This is why kairos is also a mirror of cosmic perfection.",
+  },
+  {
+    term: "Systems Theory",
+    definition:
+      "An interdisciplinary framework that studies how parts of a system interact with each other and the whole, emphasizing interdependence, feedback and emergent behavior.",
+    category: ["Other"],
+    source: "ScienceDirect",
+    source_url:
+      "https://www.sciencedirect.com/topics/psychology/systems-theory",
+    quote:
+      "...the study of open systems composed of interconnected elements that exhibit emergent properties, emphasizing that the whole cannot be reduced to its parts.",
+  },
 ];
 
 export const links: LinkEntry[] = [
