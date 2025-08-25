@@ -193,6 +193,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...the study of open systems composed of interconnected elements that exhibit emergent properties, emphasizing that the whole cannot be reduced to its parts.",
   },
+  {
+    term: "Cybernetics",
+    definition:
+      "The interdisciplinary study of control, communication and feedback in systems; whether mechanical, biological or social.",
+    category: ["Other", "Biohacking"],
+    source: "American Society For Cybernetics",
+    source_url: "https://asc-cybernetics.org/definitions/",
+    quote:
+      "Cybernetics treats not things but ways of behaving. It does not ask “what is this thing?” but “what does it do?” and “what can it do?”",
+  },
 ];
 
 export const links: LinkEntry[] = [
