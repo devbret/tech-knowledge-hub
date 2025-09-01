@@ -16,6 +16,49 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Biohacking",
+    definition:
+      "The practice of using science, technology and self-experimentation to optimize and enhance the body's biology, health and performance.",
+    category: ["Biohacking"],
+    source: "Cleveland Clinic",
+    source_url:
+      "https://my.clevelandclinic.org/podcasts/health-essentials/what-is-biohacking-with-melissa-young",
+    quote:
+      "...a DIY approach to self-care that uses everything from lifestyle changes to high-tech tools to improve your health.",
+  },
+  {
+    term: "Pattern Recognition",
+    definition:
+      "The cognitive or computational process of detecting irregularities, structures and recurring relationships within complex data or sensory input.",
+    category: ["Biohacking"],
+    source: "HappyNeuron",
+    source_url:
+      "https://www.happyneuronpro.com/en/info/what-is-pattern-recognition/",
+    quote:
+      "...the ability to identify and understand patterns within information, such as data or our surrounding environment. [...] This process involves noticing similarities, differences, and trends in input, and using this information to predict outcomes, make decisions, or learn new concepts.",
+  },
+  {
+    term: "Digital Immortality",
+    definition:
+      "Preserving a person's identity, memories and consciousness indefinitely through digital means.",
+    category: ["Other", "AI"],
+    source: "University Of Worcester",
+    source_url:
+      "https://www.worcester.ac.uk/about/news/academic-blog/education-blogs/Digital-immortality-and-Artificial-Intelligence.aspx",
+    quote:
+      "...digital immortality has moved beyond simple memorial pages and 'beyond the grave' updates, from dead family or friends. There are now companies dedicated to creating digitally immortal personas.",
+  },
+  {
+    term: "Liminal Space",
+    definition:
+      "A transitional or in-between environment, which evokes a sense of ambiguity, quiet and transformation.",
+    category: ["Other", "Biohacking"],
+    source: "Merriam-Webster",
+    source_url: "https://www.merriam-webster.com/dictionary/liminal",
+    quote:
+      "...of, relating to, or situated at a sensory threshold : barely perceptible or capable of eliciting a response...",
+  },
+  {
     term: "OPSEC",
     definition:
       "The practice of safeguarding critical information by denying adversaries insight into your activities, intentions or vulnerabilities.",
