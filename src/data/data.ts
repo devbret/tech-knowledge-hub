@@ -207,6 +207,13 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "Theta Noir",
+    url: "https://thetanoir.com/",
+    description:
+      "A performance art project that challenges mainstream narratives surrounding AI by creating speculative counter-myths.",
+    category: ["AI", "Other"],
+  },
+  {
     title: "Open Invention Network",
     url: "https://openinventionnetwork.com/",
     description:
@@ -248,7 +255,7 @@ export const links: LinkEntry[] = [
     category: ["AI", "FOSS", "Programming"],
   },
   {
-    title: "Raspberry Pi Foundation",
+    title: "RPi Foundation",
     url: "https://www.raspberrypi.org/",
     description:
       "A UK-based charity with the mission to enable young people to realise their full potential through the power of computing and digital technologies.",
