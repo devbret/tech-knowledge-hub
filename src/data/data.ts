@@ -269,6 +269,13 @@ export const links: LinkEntry[] = [
     category: ["FOSS", "OPSEC"],
   },
   {
+    title: "Hugging Face",
+    url: "https://huggingface.co/",
+    description:
+      "The platform where the machine learning community collaborates on models, datasets, and applications.",
+    category: ["AI", "Programming"],
+  },
+  {
     title: "Linux Mint",
     url: "https://linuxmint.com/",
     description:
