@@ -250,6 +250,12 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "Cyberpunk Forums",
+    url: "https://cyberpunkforums.com/",
+    description: "A collective cyberpunk community forums of significance.",
+    category: ["Biohacking"],
+  },
+  {
     title: "Theta Noir",
     url: "https://thetanoir.com/",
     description:
@@ -415,7 +421,7 @@ export const links: LinkEntry[] = [
     category: ["Other"],
   },
   {
-    title: "Dangerous Things Forum",
+    title: "Dangerous Things",
     url: "https://forum.dangerousthings.com/",
     description: "A place to discuss biohacking, projects, and technology",
     category: ["Biohacking"],
