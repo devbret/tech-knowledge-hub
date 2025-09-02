@@ -16,6 +16,37 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Remix Culture",
+    definition:
+      "A participatory creative practice where individuals rework, adapt and combine existing media, ideas or technologies to produce new cultural expressions and meanings.",
+    category: ["Other", "Audio"],
+    source: "Remix Theory",
+    source_url: "https://remixtheory.net/?page_id=3",
+    quote:
+      "...the global activity consisting of the creative and efficient exchange of information made possible by digital technologies that is supported by the practice of cut/copy and paste.",
+  },
+  {
+    term: "Open Source",
+    definition:
+      "A development model where software’s source code is made freely available for anyone to inspect, modify, and redistribute, fostering transparency and collaborative innovation.",
+    category: ["FOSS", "Programming"],
+    source: "Penn State University",
+    source_url:
+      "https://opensource.psu.edu/project/what-is-open-source-software/",
+    quote:
+      "...software whose source code is freely available to anyone. It can be modified, used, and distributed by anyone under defined licensing terms.",
+  },
+  {
+    term: "Prosumer",
+    definition:
+      "An individual who both consumes and produces media or products, actively shaping culture rather than only receiving it.",
+    category: ["Audio", "FOSS"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Prosumer",
+    quote:
+      "...an individual who both consumes and produces. The term is a portmanteau of the words producer and consumer. [...] Technological breakthroughs and a rise in user participation blurs the line between production and consumption activities, with the consumer becoming a prosumer.",
+  },
+  {
     term: "Biohacking",
     definition:
       "The practice of using science, technology and self-experimentation to optimize and enhance the body's biology, health and performance.",
@@ -432,5 +463,12 @@ export const links: LinkEntry[] = [
     description:
       "A forum by the International Biohacking Community for individuals to discuss longevity, biohacking, transhumanism, life extension, cryonics, DIY-biology, and more.",
     category: ["Biohacking"],
+  },
+  {
+    title: "Creative Commons",
+    url: "https://creativecommons.org/",
+    description:
+      "An international nonprofit organization that empowers people to grow and sustain the thriving commons of shared knowledge and culture we need to address the world's most pressing challenges and create a brighter future for all.",
+    category: ["Other"],
   },
 ];
