@@ -478,4 +478,16 @@ export const links: LinkEntry[] = [
       "...the global nonprofit building the future powered by open collaboration, transparency and innovation.",
     category: ["FOSS"],
   },
+  {
+    title: "LinuxMusicians",
+    url: "https://linuxmusicians.com/index.php",
+    description: "Creating music freely.",
+    category: ["FOSS", "Music"],
+  },
+  {
+    title: "OGA",
+    url: "https://opengameart.org/node",
+    description: "Freely available media for making video games.",
+    category: ["Audio", "Video Games"],
+  },
 ];
