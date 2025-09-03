@@ -471,4 +471,11 @@ export const links: LinkEntry[] = [
       "An international nonprofit organization that empowers people to grow and sustain the thriving commons of shared knowledge and culture we need to address the world's most pressing challenges and create a brighter future for all.",
     category: ["Other"],
   },
+  {
+    title: "Open Source Initiative",
+    url: "https://opensource.org/",
+    description:
+      "...the global nonprofit building the future powered by open collaboration, transparency and innovation.",
+    category: ["FOSS"],
+  },
 ];
