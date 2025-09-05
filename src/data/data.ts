@@ -356,6 +356,13 @@ export const links: LinkEntry[] = [
     category: ["AI", "Programming"],
   },
   {
+    title: "Hackaday.io",
+    url: "https://hackaday.io/",
+    description:
+      "The world's largest collaborative hardware development community.",
+    category: ["Hardware"],
+  },
+  {
     title: "Linux Mint",
     url: "https://linuxmint.com/",
     description:
