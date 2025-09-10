@@ -83,6 +83,7 @@ export default function GlossaryItem({
             paddingLeft: 12,
             borderLeft: "3px solid var(--border)",
             opacity: 0.9,
+            fontStyle: "italic",
           }}
         >
           {quote}

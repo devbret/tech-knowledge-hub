@@ -16,6 +16,17 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Serendipity",
+    definition:
+      "The unexpected discovery of something valuable, meaningful or pleasant while not intentionally seeking it.",
+    category: ["Other"],
+    source: "ShiftSchool",
+    source_url:
+      "https://www.shiftschool.de/guidebook-post/flexicon/serendipity/",
+    quote:
+      "I see it more as the art of stumbling into something where you least expect it. [...] This only happens if you let it occur.",
+  },
+  {
     term: "Remix Culture",
     definition:
       "A participatory creative practice where individuals rework, adapt and combine existing media, ideas or technologies to produce new cultural expressions and meanings.",
