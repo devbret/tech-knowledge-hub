@@ -508,4 +508,11 @@ export const links: LinkEntry[] = [
     description: "Freely available media for making video games.",
     category: ["Audio", "Video Games"],
   },
+  {
+    title: "Adafruit",
+    url: "https://www.adafruit.com/",
+    description:
+      "...the best place online for learning electronics and making the best designed products for makers of all ages and skill levels.",
+    category: ["Hardware"],
+  },
 ];
