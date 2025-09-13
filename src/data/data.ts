@@ -515,4 +515,11 @@ export const links: LinkEntry[] = [
       "...the best place online for learning electronics and making the best designed products for makers of all ages and skill levels.",
     category: ["Hardware"],
   },
+  {
+    title: "Project Gutenberg",
+    url: "https://gutenberg.org/",
+    description:
+      "You will find the world's great literature here, with focus on older works for which U.S. copyright has expired.",
+    category: ["Other"],
+  },
 ];
