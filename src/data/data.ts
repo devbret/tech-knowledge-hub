@@ -288,6 +288,17 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Cybernetics treats not things but ways of behaving. It does not ask “what is this thing?” but “what does it do?” and “what can it do?”",
   },
+  {
+    term: "Lucid Dreaming",
+    definition:
+      "The state of being aware that you are dreaming while still within the dream, often allowing you to influence or control its content.",
+    category: ["Biohacking"],
+    source: "ScienceDirect",
+    source_url:
+      "https://www.sciencedirect.com/science/article/abs/pii/S1053810012001614",
+    quote:
+      "...about a half of the population have experienced a lucid dream at least once and about one out of five people are experiencing lucid dreams regularly...",
+  },
 ];
 
 export const links: LinkEntry[] = [
