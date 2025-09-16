@@ -16,6 +16,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Cyborg",
+    definition:
+      "A being who combines organic biological components with mechanical or electronic enhancements to extend or augment its abilities.",
+    category: ["Biohacking", "Hardware"],
+    source: "The University Of Chicago",
+    source_url: "https://csmt.uchicago.edu/glossary2004/cyborg.htm",
+    quote:
+      "...a person whose physical tolerances or capabilities are extended beyond normal human limitations by a machine or other external agency that modifies the body's functions...",
+  },
+  {
     term: "Serendipity",
     definition:
       "The unexpected discovery of something valuable, meaningful or pleasant while not intentionally seeking it.",
