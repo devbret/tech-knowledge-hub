@@ -16,6 +16,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Augmented Cognition",
+    definition:
+      "The study and application of technologies and methods to extend or enhance human cognitive processes through real-time interaction between people and computational systems.",
+    category: ["AI"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Augmented_cognition",
+    quote:
+      "...applications which capture the human user's cognitive state [...] to drive real-time computer systems.",
+  },
+  {
     term: "Cyborg",
     definition:
       "A being who combines organic biological components with mechanical or electronic enhancements to extend or augment its abilities.",

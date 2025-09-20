@@ -73,7 +73,7 @@ export default function GlossaryItem({
       <p>{definition}</p>
 
       <button className="link-button" onClick={() => setOpen((v) => !v)}>
-        {open ? "Hide details" : "More"}
+        {open ? "Hide details" : "Show details"}
       </button>
 
       {open && quote && (
