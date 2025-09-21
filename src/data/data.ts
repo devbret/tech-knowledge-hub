@@ -16,6 +16,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Legendary Loot",
+    definition:
+      "Exceptionally rare and highly valued in-game rewards, often marked by unique abilities, powerful stats or iconic status which set it apart from ordinary items/loot.",
+    category: ["Video Games"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Loot_(video_games)",
+    quote:
+      "...the collection of items picked up by the player character that increase their power or level up their abilities, such as currency, spells, equipment and weapons.",
+  },
+  {
     term: "Augmented Cognition",
     definition:
       "The study and application of technologies and methods to extend or enhance human cognitive processes through real-time interaction between people and computational systems.",
@@ -155,7 +165,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Easter Egg",
     definition:
       "An Easter Egg is a hidden feature, message or inside joke intentionally placed within a video game, movie or software for players or users to discover.",
-    category: ["Video Games"],
+    category: ["Video Games", "Other"],
     source: "Arizona State University",
     source_url:
       "https://gamesandimpact.org/uncategorized/the-cake-is-a-lie-easter-eggs-in-video-games/",
@@ -552,5 +562,19 @@ export const links: LinkEntry[] = [
     description:
       "You will find the world's great literature here, with focus on older works for which U.S. copyright has expired.",
     category: ["Other"],
+  },
+  {
+    title: "OSHWA",
+    url: "https://oshwa.org/",
+    description:
+      "...aims to foster technological knowledge and encourage research that is accessible, collaborative and respects user freedom.",
+    category: ["Hardware"],
+  },
+  {
+    title: "W3Schools",
+    url: "https://www.w3schools.com/",
+    description:
+      "...is a school for web developers, covering all the aspects of web development...",
+    category: ["Programming"],
   },
 ];
