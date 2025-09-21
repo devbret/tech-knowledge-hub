@@ -577,4 +577,11 @@ export const links: LinkEntry[] = [
       "...is a school for web developers, covering all the aspects of web development...",
     category: ["Programming"],
   },
+  {
+    title: "SFC",
+    url: "https://sfconservancy.org/",
+    description:
+      "Software Freedom Conservancy is a nonprofit organization centered around ethical technology. Our mission is to ensure the right to repair, improve and reinstall software.",
+    category: ["FOSS", "Programming"],
+  },
 ];
