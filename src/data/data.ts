@@ -16,6 +16,17 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Infinite Recursion",
+    definition:
+      "Occurs when a recursive function never reaches a base case, causing it to keep calling itself endlessly until the program crashes or runs out of memory.",
+    category: ["Programming"],
+    source: "GeeksforGeeks",
+    source_url:
+      "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    quote:
+      "The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function.",
+  },
+  {
     term: "Technology",
     definition:
       "The application of knowledge, tools and systems to create solutions that extend human capabilities and transform the way we interact with the world.",
