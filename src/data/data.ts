@@ -16,6 +16,17 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Technology",
+    definition:
+      "The application of knowledge, tools and systems to create solutions that extend human capabilities and transform the way we interact with the world.",
+    category: ["AI", "Programming"],
+    source: "Christopher Roosen",
+    source_url:
+      "https://www.christopherroosen.com/blog/2022/8/1/a-wide-definition-of-technology",
+    quote:
+      "...a means to fulfill a human purpose. For some technologies [...] the purpose is explicit. For others [...] the purpose may be hazy, multiple, and changing. As a means, a technology may be a method or process or device...",
+  },
+  {
     term: "Legendary Loot",
     definition:
       "Exceptionally rare and highly valued in-game rewards, often marked by unique abilities, powerful stats or iconic status which set it apart from ordinary items/loot.",
@@ -24,6 +35,16 @@ export const glossary: GlossaryEntry[] = [
     source_url: "https://en.wikipedia.org/wiki/Loot_(video_games)",
     quote:
       "...the collection of items picked up by the player character that increase their power or level up their abilities, such as currency, spells, equipment and weapons.",
+  },
+  {
+    term: "Apotheosis",
+    definition:
+      "The elevation of a person or thing to divine status, often symbolizing the highest point of glory, perfection or idealization.",
+    category: ["Other"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Apotheosis",
+    quote:
+      "...the glorification of a subject to divine levels and, commonly, the treatment of a human being, any other living thing, or an abstract idea in the likeness of a deity. ",
   },
   {
     term: "Augmented Cognition",
