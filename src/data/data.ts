@@ -16,6 +16,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Paragon",
+    definition:
+      "A person or thing regarded as the perfect example of a particular quality or excellence.",
+    category: ["Other"],
+    source: "Radford Writes",
+    source_url: "https://www.radfordwrites.com/blog/paragon",
+    quote:
+      "The role of the paragon is usually to serve as an example to other characters. They show us how to be the best versions of ourselves and this means they can trigger immense character growth in other characters.",
+  },
+  {
     term: "Infinite Recursion",
     definition:
       "Occurs when a recursive function never reaches a base case, causing it to keep calling itself endlessly until the program crashes or runs out of memory.",
