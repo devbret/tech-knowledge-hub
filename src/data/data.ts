@@ -16,6 +16,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Artificial Intelligence",
+    definition:
+      "The field of computer science responsible for creating systems capable of performing tasks typically requiring human intelligence, such as reasoning, learning, perception and decision-making.",
+    category: ["AI"],
+    source: "IBM",
+    source_url: "https://www.ibm.com/think/topics/artificial-intelligence",
+    quote:
+      "...is technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision making, creativity and autonomy.",
+  },
+  {
     term: "Paragon",
     definition:
       "A person or thing regarded as the perfect example of a particular quality or excellence.",
