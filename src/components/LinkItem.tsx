@@ -12,6 +12,7 @@ const categoryColors: Record<Category, string> = {
   OPSEC: "#f59e0b",
   Hardware: "#22c55e",
   Biohacking: "#8b5cf6",
+  Blockchain: "#7c3aed",
 };
 
 function normalizeCategories(
