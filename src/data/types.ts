@@ -9,7 +9,8 @@ export type Category =
   | "Other"
   | "OPSEC"
   | "Hardware"
-  | "Biohacking";
+  | "Biohacking"
+  | "Blockchain";
 
 export interface GlossaryEntry {
   term: string;

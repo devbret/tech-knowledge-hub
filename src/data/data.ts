@@ -12,9 +12,21 @@ export const ALL_CATEGORIES: Category[] = [
   "Other",
   "Hardware",
   "Biohacking",
+  "Blockchain",
 ];
 
 export const glossary: GlossaryEntry[] = [
+  {
+    term: "DAO",
+    definition:
+      "A community-led entity governed by smart contracts on a blockchain, where decisions and rules are enforced transparently without centralized control.",
+    category: ["FOSS", "Blockchain"],
+    source: "Hedera",
+    source_url:
+      "https://hedera.com/learning/decentralized-finance/decentralized-autonomous-organization",
+    quote:
+      "A decentralized autonomous organization, or DAO, is a member-owned organization or company that operates without centralized leadership using blockchain technology. DAOs can operate across borders without difficulty, bringing members together across geographic boundaries.",
+  },
   {
     term: "Artificial Intelligence",
     definition:
