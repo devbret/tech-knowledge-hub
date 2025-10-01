@@ -17,6 +17,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Neural Entrainment",
+    definition:
+      "The process by which brainwave activity synchronizes with the rhythmic patterns of external stimuli, such as sound, light, or vibration.",
+    category: ["Biohacking"],
+    source: "Nature",
+    source_url: "https://www.nature.com/articles/s41598-025-93948-9",
+    quote:
+      "Neural entrainment to rhythmic patterns has been proposed as a mechanism that underlies beat perception and could explain individual differences in sensorimotor synchronization abilities.",
+  },
+  {
     term: "DAO",
     definition:
       "A community-led entity governed by smart contracts on a blockchain, where decisions and rules are enforced transparently without centralized control.",
