@@ -658,4 +658,11 @@ export const links: LinkEntry[] = [
       "Software Freedom Conservancy is a nonprofit organization centered around ethical technology. Our mission is to ensure the right to repair, improve and reinstall software.",
     category: ["FOSS", "Programming"],
   },
+  {
+    title: "GOL",
+    url: "https://www.gamingonlinux.com/",
+    description:
+      "Taking great pride in having accurate information around Linux, Linux Gaming, Steam Deck, SteamOS and all related news.",
+    category: ["FOSS", "Video Games"],
+  },
 ];
