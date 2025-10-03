@@ -665,4 +665,11 @@ export const links: LinkEntry[] = [
       "Taking great pride in having accurate information around Linux, Linux Gaming, Steam Deck, SteamOS and all related news.",
     category: ["FOSS", "Video Games"],
   },
+  {
+    title: "freeCodeCamp",
+    url: "https://www.freecodecamp.org/",
+    description:
+      "Our mission [is] to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public.",
+    category: ["Programming"],
+  },
 ];
