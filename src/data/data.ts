@@ -17,6 +17,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Agentic AI",
+    definition:
+      "A type of system that can autonomously perceive its environment, make decisions and execute multi-step actions to proactively achieve specific goals without requiring constant human intervention.",
+    category: ["AI", "Programming"],
+    source: "Amazon Web Services",
+    source_url: "https://aws.amazon.com/what-is/agentic-ai/",
+    quote:
+      "...agentic AI is proactive and can perform complex tasks without constant human oversight. 'Agentic' indicates agency — the ability of these systems to act independently, but in a goal-driven manner.",
+  },
+  {
     term: "Neural Entrainment",
     definition:
       "The process by which brainwave activity synchronizes with the rhythmic patterns of external stimuli, such as sound, light, or vibration.",
