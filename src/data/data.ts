@@ -17,6 +17,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Inference",
+    definition:
+      "Process by which a trained model uses learned patterns from data to make predictions, generate outputs or draw conclusions from new, unseen inputs.",
+    category: ["AI", "Programming"],
+    source: "IBM",
+    source_url: "https://www.ibm.com/think/topics/ai-inference",
+    quote:
+      "...inference is the ability of trained AI models to recognize patterns and draw conclusions from information that they haven't seen before.",
+  },
+  {
     term: "Agentic AI",
     definition:
       "A type of system that can autonomously perceive its environment, make decisions and execute multi-step actions to proactively achieve specific goals without requiring constant human intervention.",
