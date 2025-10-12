@@ -692,4 +692,11 @@ export const links: LinkEntry[] = [
       "Our mission [is] to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public.",
     category: ["Programming"],
   },
+  {
+    title: "FSF",
+    url: "https://www.fsf.org/",
+    description:
+      "The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users. ",
+    category: ["Programming", "FOSS"],
+  },
 ];
