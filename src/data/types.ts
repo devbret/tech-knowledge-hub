@@ -5,6 +5,7 @@ export type Category =
   | "FOSS"
   | "Programming"
   | "Audio"
+  | "Cybersecurity"
   | "Music"
   | "Other"
   | "OPSEC"

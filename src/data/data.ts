@@ -9,6 +9,7 @@ export const ALL_CATEGORIES: Category[] = [
   "Audio",
   "OPSEC",
   "Music",
+  "Cybersecurity",
   "Other",
   "Hardware",
   "Biohacking",
@@ -16,6 +17,27 @@ export const ALL_CATEGORIES: Category[] = [
 ];
 
 export const glossary: GlossaryEntry[] = [
+  {
+    term: "Computer Vision",
+    definition:
+      "A field of artificial intelligence that enables machines to perceive and process visual information as input, such as from images and videos.",
+    category: ["AI"],
+    source: "SAS",
+    source_url:
+      "https://www.sas.com/en_us/insights/analytics/computer-vision.html",
+    quote:
+      "...trains computers to interpret and understand the visual world. Using digital images from cameras and videos and deep learning models, machines can accurately identify and classify objects...",
+  },
+  {
+    term: "Tokenization",
+    definition:
+      "Breaking down text into smaller, meaningful units which are the fundamental building blocks used by language models and other AI systems to understand and process information.",
+    category: ["AI"],
+    source: "AI21",
+    source_url: "https://www.ai21.com/knowledge/tokenization/",
+    quote:
+      "AI tokenization is the process of converting text into smaller, standardized units called tokens that language models can mathematically process. Depending on the tokenization method used, these tokens can represent whole words, parts of words (subwords), or even individual characters.",
+  },
   {
     term: "Inference",
     definition:
@@ -228,7 +250,7 @@ export const glossary: GlossaryEntry[] = [
     term: "OPSEC",
     definition:
       "The practice of safeguarding critical information by denying adversaries insight into your activities, intentions or vulnerabilities.",
-    category: ["OPSEC"],
+    category: ["OPSEC", "Cybersecurity"],
     source: "NIST",
     source_url: "https://csrc.nist.gov/glossary/term/operations_security",
     quote:
@@ -291,7 +313,7 @@ export const glossary: GlossaryEntry[] = [
     term: "OSINT",
     definition:
       "The collection and analysis of information from publicly available sources to produce actionable intelligence.",
-    category: ["OSINT", "FOSS"],
+    category: ["OSINT", "Cybersecurity"],
     source: "Recorded Future",
     source_url:
       "https://www.recordedfuture.com/blog/open-source-intelligence-definition",
@@ -698,5 +720,12 @@ export const links: LinkEntry[] = [
     description:
       "The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users. ",
     category: ["Programming", "FOSS"],
+  },
+  {
+    title: "Internet Society",
+    url: "https://www.internetsociety.org/",
+    description:
+      "...a global network of leaders shaping an open, secure, and inclusive Internet. The Internet Society fosters collaborations that drive meaningful change.",
+    category: ["Cybersecurity"],
   },
 ];
