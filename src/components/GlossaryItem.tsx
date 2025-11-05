@@ -46,7 +46,7 @@ export default function GlossaryItem({
       ? {
           background: `linear-gradient(90deg, ${categories
             .map((cat, i) => {
-              const c = categoryColors[cat as Category] ?? "#9ca3af"; // fallback gray
+              const c = categoryColors[cat as Category] ?? "#9ca3af";
               const start = (100 / categories.length) * i;
               const end = (100 / categories.length) * (i + 1);
               return `${c} ${start}% ${end}%`;
