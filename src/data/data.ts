@@ -728,4 +728,25 @@ export const links: LinkEntry[] = [
       "...a global network of leaders shaping an open, secure, and inclusive Internet. The Internet Society fosters collaborations that drive meaningful change.",
     category: ["Cybersecurity"],
   },
+  {
+    title: "The Odin Project",
+    url: "https://www.theodinproject.com/",
+    description:
+      "...is designed to fill in the gap for people who are trying to hack it on their own but still want a high quality education.",
+    category: ["Programming"],
+  },
+  {
+    title: "Real Python",
+    url: "https://realpython.com/",
+    description:
+      "...is a leading provider of online Python education and one of the largest language-specific online communities for software developers.",
+    category: ["Programming"],
+  },
+  {
+    title: "Long Now",
+    url: "https://longnow.org/",
+    description:
+      "A nonprofit fostering long-term thinking and responsibility on the timescale of civilization through projects, talks, and cultural initiatives.",
+    category: ["Other"],
+  },
 ];
