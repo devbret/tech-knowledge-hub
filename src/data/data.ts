@@ -18,6 +18,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Hyperstition",
+    definition:
+      "Ideas or narratives that, once introduced, propagate through culture and eventually bring about the very realities they describe.",
+    category: ["Other"],
+    source: "Cyborg Anthropology Wiki",
+    source_url: "https://cyborganthropology.com/index.php/Hyperstition",
+    quote:
+      "Hyperstition was coined by the British cultural theorists Nick Land and Mark Fisher to describe the way in which certain cultural ideas or narratives can become self-fulfilling prophecies.",
+  },
+  {
     term: "Computer Vision",
     definition:
       "A field of artificial intelligence that enables machines to perceive and process visual information as input, such as from images and videos.",
@@ -448,6 +458,20 @@ export const glossary: GlossaryEntry[] = [
 ];
 
 export const links: LinkEntry[] = [
+  {
+    title: "P2P Foundation",
+    url: "https://p2pfoundation.net/",
+    description:
+      "...is a non-profit organization and global network dedicated to advocacy and research of commons-oriented peer to peer (P2P) dynamics in society.",
+    category: ["Other"],
+  },
+  {
+    title: "TDF",
+    url: "https://www.documentfoundation.org/",
+    description:
+      "[The Document Foundation] is an independent self-governing meritocratic entity, created by a large group of Free Software advocates, in the form of a charitable Foundation under German law...",
+    category: ["FOSS"],
+  },
   {
     title: "Cyberpunk Forums",
     url: "https://cyberpunkforums.com/",
