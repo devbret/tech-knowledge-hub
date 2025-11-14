@@ -780,4 +780,11 @@ export const links: LinkEntry[] = [
       "...an open source containerization technology for building and containerizing your applications.",
     category: ["FOSS"],
   },
+  {
+    title: "Lifeboat Foundation",
+    url: "https://lifeboat.com/",
+    description:
+      "...dedicated to encouraging scientific advancements while helping humanity survive existential risks and possible misuse of increasingly powerful technologies...",
+    category: ["Other"],
+  },
 ];
