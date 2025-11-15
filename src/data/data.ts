@@ -455,6 +455,17 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...about a half of the population have experienced a lucid dream at least once and about one out of five people are experiencing lucid dreams regularly...",
   },
+  {
+    term: "Dubplate",
+    definition:
+      "A custom, one-off vinyl or acetate recording (often featuring exclusive mixes or artist shout-outs) used by DJs and sound systems for unique, competitive playback.",
+    category: ["Music", "Audio"],
+    source: "Reggae Roast",
+    source_url:
+      "https://reggaeroast.co.uk/blogs/news/dubplates-the-secret-sauce-of-soundsystem-culture",
+    quote:
+      "...an exclusive version of a track, often personalised with lyrics or sounds unique to the DJ, sound system, or selector who commissions it.",
+  },
 ];
 
 export const links: LinkEntry[] = [
@@ -786,5 +797,24 @@ export const links: LinkEntry[] = [
     description:
       "...dedicated to encouraging scientific advancements while helping humanity survive existential risks and possible misuse of increasingly powerful technologies...",
     category: ["Other"],
+  },
+  {
+    title: "Audacity",
+    url: "https://www.audacityteam.org/",
+    description:
+      "Audacity is the world’s most popular free software for recording and editing audio.",
+    category: ["Audio", "FOSS"],
+  },
+  {
+    title: "The Debian Project",
+    url: "https://www.debian.org/",
+    description: `...an association of individuals, sharing a common goal: We want to create a free operating system, freely available for everyone.`,
+    category: ["FOSS"],
+  },
+  {
+    title: "Ubuntu",
+    url: "https://ubuntu.com/",
+    description: `The number 1 open source operating system powering millions of PCs and laptops around the world.`,
+    category: ["Programming", "FOSS"],
   },
 ];
