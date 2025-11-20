@@ -802,7 +802,7 @@ export const links: LinkEntry[] = [
     title: "Audacity",
     url: "https://www.audacityteam.org/",
     description:
-      "Audacity is the world’s most popular free software for recording and editing audio.",
+      "Audacity is the world's most popular free software for recording and editing audio.",
     category: ["Audio", "FOSS"],
   },
   {
@@ -816,5 +816,29 @@ export const links: LinkEntry[] = [
     url: "https://ubuntu.com/",
     description: `The number 1 open source operating system powering millions of PCs and laptops around the world.`,
     category: ["Programming", "FOSS"],
+  },
+  {
+    title: "GIMP",
+    url: "https://www.gimp.org/",
+    description: `GIMP is a cross-platform image editor available for GNU/Linux, macOS, Windows and more operating systems.`,
+    category: ["FOSS"],
+  },
+  {
+    title: "OBS",
+    url: "https://obsproject.com/",
+    description: `Free and open source software for video recording and live streaming.`,
+    category: ["FOSS", "Audio"],
+  },
+  {
+    title: "Mozilla",
+    url: "https://www.mozilla.org/",
+    description: `Mozilla is a global community of passionate volunteers, fellows and contributors who have been building, protecting and shaping the internet [...] since 1998.`,
+    category: ["Other", "FOSS"],
+  },
+  {
+    title: "Internet Archive",
+    url: "https://archive.org/",
+    description: `...a non-profit library of millions of free texts, movies, software, music, websites, and more.`,
+    category: ["OSINT", "Other"],
   },
 ];
