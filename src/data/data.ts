@@ -841,4 +841,10 @@ export const links: LinkEntry[] = [
     description: `...a non-profit library of millions of free texts, movies, software, music, websites, and more.`,
     category: ["OSINT", "Other"],
   },
+  {
+    title: "OpenVPN",
+    url: "https://openvpn.net/",
+    description: `Free and open-source server/client software which uses SSL/TLS to create secure, encrypted VPN tunnels for remote access or site-to-site networking.`,
+    category: ["OPSEC", "FOSS"],
+  },
 ];
