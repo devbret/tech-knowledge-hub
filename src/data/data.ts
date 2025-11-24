@@ -847,4 +847,22 @@ export const links: LinkEntry[] = [
     description: `Free and open-source server/client software which uses SSL/TLS to create secure, encrypted VPN tunnels for remote access or site-to-site networking.`,
     category: ["OPSEC", "FOSS"],
   },
+  {
+    title: "KeePassXC",
+    url: "https://keepassxc.org/",
+    description: `A free, open-source, cross-platform password manager for storing your credentials in an encrypted local database.`,
+    category: ["OPSEC", "FOSS"],
+  },
+  {
+    title: "ZoneMinder",
+    url: "https://zoneminder.com/",
+    description: `A free, open-source, self-hosted video surveillance system for Linux that lets you capture, monitor, record and review security camera feeds.`,
+    category: ["OPSEC", "FOSS"],
+  },
+  {
+    title: "News API",
+    url: "https://newsapi.org/",
+    description: `Locate articles and breaking news headlines from news sources and blogs across the web with a JSON API.`,
+    category: ["OSINT", "Programming"],
+  },
 ];
