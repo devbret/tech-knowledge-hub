@@ -865,4 +865,10 @@ export const links: LinkEntry[] = [
     description: `Locate articles and breaking news headlines from news sources and blogs across the web with a JSON API.`,
     category: ["OSINT", "Programming"],
   },
+  {
+    title: "VLC",
+    url: "https://www.videolan.org/",
+    description: `...a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols. `,
+    category: ["FOSS", "Audio"],
+  },
 ];
