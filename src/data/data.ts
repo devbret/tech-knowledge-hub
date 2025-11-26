@@ -18,6 +18,47 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Scope",
+    definition:
+      "The region of code where a variable, function, or name is visible and can be accessed.",
+    category: ["Programming"],
+    source: "W3Schools",
+    source_url: "https://www.w3schools.com/programming/prog_scope.php",
+    quote:
+      "Think of scope as a container. Variables defined in one container (scope) may or may not be visible to code in other containers, depending on the type of scope.",
+  },
+  {
+    term: "Context Window",
+    definition:
+      "The fixed amount of text or data an AI model can see at once, including your prompt and the model's.",
+    category: ["AI"],
+    source: "Claude Docs",
+    source_url:
+      "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+    quote:
+      '...is different from the large corpus of data the language model was trained on, and instead represents a "working memory" for the model.',
+  },
+  {
+    term: "Jungle",
+    definition:
+      "An early-1990s UK breakbeat hardcore offshoot that uses sped-up, chopped amen-style breakbeats, heavy sub-bass, ragga/dancehall and hip-hop samples and a raw, syncopated, rave-driven vibe.",
+    category: ["Music"],
+    source: "The Cat Rave",
+    source_url: "https://thecatrave.com/jungle-music-guide",
+    quote:
+      "What started as a local sound in London’s urban jungle quickly became a cultural movement with its own slang, fashion, and fierce community.",
+  },
+  {
+    term: "Drum And Bass (DNB)",
+    definition:
+      "Fast, bass-heavy electronic dance music style built around rapid breakbeats (typically 160-180 BPM) and deep sub-bass lines.",
+    category: ["Music"],
+    source: "Wikipedia",
+    source_url: "https://en.wikipedia.org/wiki/Drum_and_bass",
+    quote:
+      "Originating in the UK jungle scene in the early 1990s, drum and bass drew on elements of reggae, dub, hip hop, breakbeat hardcore, techno, and house.",
+  },
+  {
     term: "Hyperstition",
     definition:
       "Ideas or narratives that, once introduced, propagate through culture and eventually bring about the very realities they describe.",
