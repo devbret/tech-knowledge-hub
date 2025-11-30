@@ -18,6 +18,16 @@ export const ALL_CATEGORIES: Category[] = [
 
 export const glossary: GlossaryEntry[] = [
   {
+    term: "Software",
+    definition:
+      "A set of instructions and data telling a computer or other device how to perform tasks or provide functions.",
+    category: ["Programming", "FOSS"],
+    source: "freeCodeCamp",
+    source_url: "https://www.freecodecamp.org/news/software-definition/",
+    quote:
+      "Software can describe an operating system like Windows 10 or macOS, or their underlying processes. Software can also describe things like Microsoft Word or Adobe Photoshop.",
+  },
+  {
     term: "Scope",
     definition:
       "The region of code where a variable, function, or name is visible and can be accessed.",
@@ -237,7 +247,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Open Source",
     definition:
       "A development model where software’s source code is made freely available for anyone to inspect, modify, and redistribute, fostering transparency and collaborative innovation.",
-    category: ["FOSS", "Programming"],
+    category: ["FOSS"],
     source: "Penn State University",
     source_url:
       "https://opensource.psu.edu/project/what-is-open-source-software/",
