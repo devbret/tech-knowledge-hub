@@ -922,4 +922,10 @@ export const links: LinkEntry[] = [
     description: `...a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols. `,
     category: ["FOSS", "Audio"],
   },
+  {
+    title: "Chroma",
+    url: "https://www.trychroma.com/",
+    description: `...makes it easy to build LLM apps by making knowledge, facts, and skills pluggable for LLMs.`,
+    category: ["FOSS", "Programming"],
+  },
 ];
