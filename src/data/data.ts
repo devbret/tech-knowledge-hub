@@ -14,9 +14,51 @@ export const ALL_CATEGORIES: Category[] = [
   "Hardware",
   "Biohacking",
   "Blockchain",
+  "DevOps",
 ];
 
 export const glossary: GlossaryEntry[] = [
+  {
+    term: "Orchestration",
+    definition:
+      "The automated coordination and management of multiple services or containers—handling tasks like deployment, scaling, networking and recovery so systems run reliably.",
+    category: ["DevOps"],
+    source: "Databricks",
+    source_url: "https://www.databricks.com/glossary/orchestration",
+    quote:
+      "Orchestration is the coordination and management of multiple computer systems, applications and/or services, stringing together multiple tasks in order to execute a larger workflow or process.",
+  },
+  {
+    term: "Container",
+    definition:
+      "A lightweight, isolated package for bundling an application with its dependencies and configuration so it runs consistently across different environments.",
+    category: ["Programming", "DevOps"],
+    source: "Docker Docs",
+    source_url:
+      "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/",
+    quote:
+      "...containers are isolated processes for each of your app's components. Each component [...] runs in its own isolated environment, completely isolated from everything else on your machine.",
+  },
+  {
+    term: "Unit Testing",
+    definition:
+      "The practice of verifying individual, small pieces of code are behaving correctly in isolation.",
+    category: ["Programming"],
+    source: "AWS",
+    source_url: "https://aws.amazon.com/what-is/unit-testing/",
+    quote:
+      "...if a test fails, you can quickly isolate the area of the code that has the bug or error. Unit testing enforces modular thinking paradigms and improves test coverage and quality.",
+  },
+  {
+    term: "Mutability",
+    definition:
+      "The property of an object or value which determines whether it can be changed after it is created.",
+    category: ["Programming"],
+    source: "MIT",
+    source_url: "https://web.mit.edu/6.005/www/fa15/classes/09-immutability/",
+    quote:
+      "...some objects are immutable: once created, they always represent the same value. Other objects are mutable: they have methods that change the value of the object.",
+  },
   {
     term: "Software",
     definition:
@@ -600,7 +642,7 @@ export const links: LinkEntry[] = [
     url: "https://pi-hole.net/",
     description:
       "Instead of browser plugins or other software on each computer, install Pi-hole in one place and your entire network is protected.",
-    category: ["FOSS", "OPSEC"],
+    category: ["FOSS", "OPSEC", "DevOps"],
   },
   {
     title: "Hugging Face",
@@ -703,7 +745,7 @@ export const links: LinkEntry[] = [
     url: "https://kubernetes.io/",
     description:
       "An open source system for automating deployment, scaling, and management of containerized applications.",
-    category: ["FOSS"],
+    category: ["FOSS", "DevOps"],
   },
   {
     title: "EFF",
@@ -840,7 +882,7 @@ export const links: LinkEntry[] = [
     url: "https://docs.docker.com/engine/",
     description:
       "...an open source containerization technology for building and containerizing your applications.",
-    category: ["FOSS"],
+    category: ["FOSS", "DevOps"],
   },
   {
     title: "Lifeboat Foundation",
