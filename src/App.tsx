@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import { buildCategoryMatrix } from "./utils/buildCategoryMatrix";
 import CategoryChord from "./components/CategoryChord";
+import CategoryNetwork from "./components/CategoryNetwork";
 import { ALL_CATEGORIES, glossary, links } from "./data/data";
 import type { Category } from "./data/types";
 import "./styles/App.css";
@@ -16,6 +17,7 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [activeCats, setActiveCats] = useState<Set<Category>>(new Set());
   const [showChord, setShowChord] = useState(false);
+  const [showNetwork, setShowNetwork] = useState(false);
 
   const allItems = [...glossary, ...links];
   const { matrix, categories } = buildCategoryMatrix(allItems, ALL_CATEGORIES);
@@ -23,7 +25,11 @@ export default function App() {
   const toggleCat = (c: Category) =>
     setActiveCats((prev) => {
       const next = new Set(prev);
-      next.has(c) ? next.delete(c) : next.add(c);
+      if (next.has(c)) {
+        next.delete(c);
+      } else {
+        next.add(c);
+      }
       return next;
     });
 
@@ -38,6 +44,7 @@ export default function App() {
     localStorage.setItem("tkh:query", query);
   }, [query]);
 
+  // If chord is open, render chord-only page
   if (showChord) {
     return (
       <div className="app chord-page">
@@ -52,6 +59,25 @@ export default function App() {
 
         <main className="chord-page__main">
           <CategoryChord matrix={matrix} categories={categories} />
+        </main>
+      </div>
+    );
+  }
+
+  if (showNetwork) {
+    return (
+      <div className="app chord-page">
+        <header className="chord-page__header">
+          <button
+            className="chord-page__close-btn"
+            onClick={() => setShowNetwork(false)}
+          >
+            Close Network Graph
+          </button>
+        </header>
+
+        <main className="chord-page__main">
+          <CategoryNetwork glossary={glossary} links={links} />
         </main>
       </div>
     );
@@ -74,8 +100,24 @@ export default function App() {
         />
 
         <div className="open-chord-wrap">
-          <button className="open-chord-btn" onClick={() => setShowChord(true)}>
+          <button
+            className="open-chord-btn"
+            onClick={() => {
+              setShowNetwork(false);
+              setShowChord(true);
+            }}
+          >
             Open Chord Graph
+          </button>
+
+          <button
+            className="open-network-btn"
+            onClick={() => {
+              setShowChord(false);
+              setShowNetwork(true);
+            }}
+          >
+            Open Network Graph
           </button>
         </div>
       </section>
