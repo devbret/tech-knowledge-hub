@@ -570,6 +570,20 @@ export const links: LinkEntry[] = [
     category: ["Other"],
   },
   {
+    title: "OAuth",
+    url: "https://oauth.net/",
+    description:
+      "An open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.",
+    category: ["Other", "Programming"],
+  },
+  {
+    title: "Python",
+    url: "https://www.python.org/",
+    description:
+      "...is a programming language that lets you work quickly and integrate systems more effectively.",
+    category: ["Programming"],
+  },
+  {
     title: "TDF",
     url: "https://www.documentfoundation.org/",
     description:
