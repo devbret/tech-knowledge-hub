@@ -563,6 +563,34 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "OWASP",
+    url: "https://owasp.org/",
+    description:
+      "...is a nonprofit foundation that works to improve the security of software.",
+    category: ["FOSS", "Cybersecurity"],
+  },
+  {
+    title: "W3C",
+    url: "https://www.w3.org/",
+    description:
+      "...develops standards and guidelines to help everyone build a web based on the principles of accessibility, internationalization, privacy and security.",
+    category: ["Other"],
+  },
+  {
+    title: "OpenSSF",
+    url: "https://openssf.org/",
+    description:
+      "...seeks to make it easier to sustainably secure the development, maintenance, release, and consumption of the open source software (OSS) we all depend on.",
+    category: ["FOSS", "Cybersecurity"],
+  },
+  {
+    title: "ASF",
+    url: "https://www.apache.org/",
+    description:
+      "The Apache Software Foundation provides software for the public good, guided by community over code. Like the enduring oak tree, our projects thrive through the contributions of thousands worldwide.",
+    category: ["FOSS", "Other", "Programming"],
+  },
+  {
     title: "P2P Foundation",
     url: "https://p2pfoundation.net/",
     description:
