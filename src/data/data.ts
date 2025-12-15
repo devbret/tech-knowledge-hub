@@ -563,6 +563,13 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "P2P Foundation",
+    url: "https://p2pfoundation.net/",
+    description:
+      "...is a non-profit organization and global network dedicated to advocacy and research of commons-oriented peer to peer (P2P) dynamics in society.",
+    category: ["Other"],
+  },
+  {
     title: "OWASP",
     url: "https://owasp.org/",
     description:
@@ -589,13 +596,6 @@ export const links: LinkEntry[] = [
     description:
       "The Apache Software Foundation provides software for the public good, guided by community over code. Like the enduring oak tree, our projects thrive through the contributions of thousands worldwide.",
     category: ["FOSS", "Other", "Programming"],
-  },
-  {
-    title: "P2P Foundation",
-    url: "https://p2pfoundation.net/",
-    description:
-      "...is a non-profit organization and global network dedicated to advocacy and research of commons-oriented peer to peer (P2P) dynamics in society.",
-    category: ["Other"],
   },
   {
     title: "OAuth",
