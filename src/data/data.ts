@@ -563,10 +563,10 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
-    title: "Open Knowledge Foundation",
+    title: "OKF",
     url: "https://okfn.org/en/",
     description:
-      "...at the intersection of cutting-edge digital tools and a distributed network of communities and movements to serve the public interest with open knowledge.",
+      "Since 2004, the Open Knowledge Foundation has worked at the intersection of cutting-edge digital tools and a distributed network of communities and movements to serve the public interest with open knowledge.",
     category: ["Other"],
   },
   {
