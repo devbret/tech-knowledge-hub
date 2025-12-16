@@ -15,7 +15,7 @@ export default function TagFilter({
 }: Props) {
   return (
     <div className="container tags">
-      <span className="muted">Filter:</span>
+      <span className="muted filter-label">Filter:</span>
       {categories.map((c) => (
         <button
           key={c}

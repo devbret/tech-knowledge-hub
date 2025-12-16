@@ -44,7 +44,6 @@ export default function App() {
     localStorage.setItem("tkh:query", query);
   }, [query]);
 
-  // If chord is open, render chord-only page
   if (showChord) {
     return (
       <div className="app chord-page">
@@ -123,8 +122,17 @@ export default function App() {
       </section>
 
       <main>
-        <GlossaryList items={glossary} query={query} categories={activeCats} />
-        <LinkList items={links} query={query} categories={activeCats} />
+        <section className="full-bleed">
+          <GlossaryList
+            items={glossary}
+            query={query}
+            categories={activeCats}
+          />
+        </section>
+
+        <section className="full-bleed">
+          <LinkList items={links} query={query} categories={activeCats} />
+        </section>
       </main>
 
       <Footer />
