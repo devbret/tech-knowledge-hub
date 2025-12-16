@@ -23,7 +23,7 @@ export default function SearchBar({ value, onChange, placeholder }: Props) {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container search-bar">
       <input
         ref={ref}
         className="search"
