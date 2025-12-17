@@ -433,7 +433,7 @@ footer.footer {
 
 .chord-page__close-btn {
   position: fixed;
-  inset-block-end: 16px;
+  inset-block-start: 16px;
   inset-inline-start: 16px;
   z-index: 999;
 
