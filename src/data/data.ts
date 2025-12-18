@@ -563,6 +563,13 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "VGHF",
+    url: "https://gamehistory.org/",
+    description:
+      "The Video Game History Foundation is a 501(c)3 non-profit organization dedicated to preserving, celebrating, and teaching the history of video games.",
+    category: ["Video Games"],
+  },
+  {
     title: "OKF",
     url: "https://okfn.org/en/",
     description:

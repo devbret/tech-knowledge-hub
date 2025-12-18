@@ -239,6 +239,7 @@ h3 {
   gap: 14px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   inline-size: 100%;
+  align-items: start;
 }
 
 .card {
