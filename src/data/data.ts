@@ -563,6 +563,13 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "Wikimedia Foundation",
+    url: "https://wikimediafoundation.org/",
+    description:
+      "We are the nonprofit that hosts Wikipedia. We support the people, technology, and policies that enable reliable information to be shared with the world.",
+    category: ["Other"],
+  },
+  {
     title: "VGHF",
     url: "https://gamehistory.org/",
     description:
