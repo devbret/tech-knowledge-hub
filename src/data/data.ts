@@ -563,6 +563,13 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "Kdenlive",
+    url: "https://kdenlive.org/",
+    description:
+      "...a community project which aims to deliver a free and open source video editing software application to allow everybody to produce high quality content in order to increase the democratization of the media.",
+    category: ["FOSS", "Other"],
+  },
+  {
     title: "Wikimedia Foundation",
     url: "https://wikimediafoundation.org/",
     description:
