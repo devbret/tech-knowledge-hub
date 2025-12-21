@@ -559,6 +559,17 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...an exclusive version of a track, often personalised with lyrics or sounds unique to the DJ, sound system, or selector who commissions it.",
   },
+  {
+    term: "Autopoiesis",
+    definition:
+      "The process by which a system continuously regenerates and sustains the components which constitute it, while maintaining its identity and boundaries.",
+    category: ["Other"],
+    source: "Emergent Futures Lab",
+    source_url:
+      "https://emergentfutureslab.com/innovation-glossary/autopoiesis",
+    quote:
+      "Autopoietic systems can generate order and even life from non-order. Self-organizing systems under the right conditions will spontaneously generate order.",
+  },
 ];
 
 export const links: LinkEntry[] = [
