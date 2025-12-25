@@ -570,6 +570,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Autopoietic systems can generate order and even life from non-order. Self-organizing systems under the right conditions will spontaneously generate order.",
   },
+  {
+    term: "REST API",
+    definition:
+      "A way for software systems to communicate over the web using standard HTTP methods, where resources are identified by URLs and manipulated using stateless requests.",
+    category: ["AI", "Programming"],
+    source: "Red Hat",
+    source_url: "https://www.redhat.com/en/topics/api/what-is-a-rest-api",
+    quote:
+      "A REST API is an application programming interface (API) that follows the design principles of the REST architectural style. REST is short for representational state transfer, and is a set of rules and guidelines about how you should build a web API.",
+  },
 ];
 
 export const links: LinkEntry[] = [
