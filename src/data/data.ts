@@ -580,6 +580,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "A REST API is an application programming interface (API) that follows the design principles of the REST architectural style. REST is short for representational state transfer, and is a set of rules and guidelines about how you should build a web API.",
   },
+  {
+    term: "Encryption",
+    definition:
+      "Converting readable data into an encoded form so only authorized parties with the correct key can access and understand it.",
+    category: ["DevOps", "Cybersecurity"],
+    source: "NIST",
+    source_url: "https://csrc.nist.gov/glossary/term/encryption",
+    quote:
+      "Cryptographic transformation of data (called “plaintext”) into a form (called “ciphertext”) that conceals the data's original meaning to prevent it from being known or used.",
+  },
 ];
 
 export const links: LinkEntry[] = [
