@@ -584,6 +584,12 @@ export const glossary: GlossaryEntry[] = [
 
 export const links: LinkEntry[] = [
   {
+    title: "Blockbench",
+    url: "https://www.blockbench.net/",
+    description: "A low-poly 3D model editor.",
+    category: ["FOSS", "Other"],
+  },
+  {
     title: "Kdenlive",
     url: "https://kdenlive.org/",
     description:
