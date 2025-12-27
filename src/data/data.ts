@@ -590,6 +590,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Cryptographic transformation of data (called “plaintext”) into a form (called “ciphertext”) that conceals the data's original meaning to prevent it from being known or used.",
   },
+  {
+    term: "Computer",
+    definition:
+      "An electronic device that accepts input, processes data according to programmed instructions and produces output or stores results.",
+    category: ["Hardware", "Other"],
+    source: "PCMag",
+    source_url: "https://www.pcmag.com/encyclopedia/term/computer",
+    quote:
+      'A computer is a general-purpose machine that processes data according to a set of instructions temporarily or permanently stored internally. The computer and all the equipment attached to it are "hardware." The instructions that tell the computer what to do are "software."',
+  },
 ];
 
 export const links: LinkEntry[] = [
