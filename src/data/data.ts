@@ -600,6 +600,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       'A computer is a general-purpose machine that processes data according to a set of instructions temporarily or permanently stored internally. The computer and all the equipment attached to it are "hardware." The instructions that tell the computer what to do are "software."',
   },
+  {
+    term: "Hardware",
+    definition:
+      "The collection of physical, tangible components of a computer system, such as the processor and storage devices, which work together to perform computing tasks.",
+    category: ["Hardware"],
+    source: "IBM",
+    source_url: "https://www.ibm.com/think/topics/hardware",
+    quote:
+      "Computer hardware is typically divided into internal and external components. Internal hardware is located inside the computer case and includes components that handle processing power and storage capabilities. External hardware consists of peripheral devices that connect to the computer from the outside to support interaction and expand performance.",
+  },
 ];
 
 export const links: LinkEntry[] = [
