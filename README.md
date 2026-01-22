@@ -1,6 +1,6 @@
 # Tech Knowledge Hub
 
-![Screenshot of the Tech Knowledge Hub web app.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/aef06f47-887c-453c-aae4-f51c7f7f5d85.png)
+![Screenshot of the Tech Knowledge Hub web app.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/134d8a12-92cd-4e19-8dda-5e403a1f2589.png)
 
 Tech Knowledge Hub is a digital glossary and resource archive curated by Bret Bernhoft, designed to organize and share key ideas, terminology and references across technology, science and digital culture.
 
