@@ -610,6 +610,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Computer hardware is typically divided into internal and external components. Internal hardware is located inside the computer case and includes components that handle processing power and storage capabilities. External hardware consists of peripheral devices that connect to the computer from the outside to support interaction and expand performance.",
   },
+  {
+    term: "Quantified Self",
+    definition:
+      "The practice of intentionally collecting and analyzing personal data to gain self-knowledge and improve one's life through insights.",
+    category: ["Biohacking"],
+    source: "NIH",
+    source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11089609/",
+    quote:
+      "The quantified self is the practice of an individual using monitoring devices, apps, self-recorded data, and so on to track, record, and analyze their daily life. Technology often plays a key role in data acquisition, management, and presentation for interpretation.",
+  },
 ];
 
 export const links: LinkEntry[] = [
