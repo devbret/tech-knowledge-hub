@@ -620,6 +620,17 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "The quantified self is the practice of an individual using monitoring devices, apps, self-recorded data, and so on to track, record, and analyze their daily life. Technology often plays a key role in data acquisition, management, and presentation for interpretation.",
   },
+  {
+    term: "Zero Trust",
+    definition:
+      "A security model which assumes no user, device or system is trustworthy by default and requires continuous verification for every access request, regardless of location.",
+    category: ["Cybersecurity"],
+    source: "Trend Micro",
+    source_url:
+      "https://www.trendmicro.com/en_us/what-is/what-is-zero-trust.html",
+    quote:
+      "...an architectural approach and goal for network security that assumes that every transaction, entity, and identity is untrusted until trust is established and maintained over time.",
+  },
 ];
 
 export const links: LinkEntry[] = [
