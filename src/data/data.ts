@@ -631,6 +631,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...an architectural approach and goal for network security that assumes that every transaction, entity, and identity is untrusted until trust is established and maintained over time.",
   },
+  {
+    term: "HTTP",
+    definition:
+      "Hypertext Transfer Protocol is the stateless protocol used by web browsers and servers to request and transfer resources like HTML pages and data over the internet.",
+    category: ["Cybersecurity", "Programming"],
+    source: "MDN",
+    source_url: "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    quote:
+      "HTTP is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes, such as machine-to-machine communication, programmatic access to APIs, and more.",
+  },
 ];
 
 export const links: LinkEntry[] = [
