@@ -641,6 +641,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "HTTP is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes, such as machine-to-machine communication, programmatic access to APIs, and more.",
   },
+  {
+    term: "Memetics",
+    definition:
+      "Memetics is the study of how ideas, behaviors, and cultural symbols (“memes”) spread, evolve, and compete within human culture in a manner analogous to biological evolution.",
+    category: ["Other", "Biohacking"],
+    source: "LessWrong",
+    source_url: "https://www.lesswrong.com/w/memetics",
+    quote:
+      "...a key consideration is that an idea or memes ability to propagate in a given context, discussion, culture, or environment, is determined by its relative fitness in that environment, and this in turn determines its prevalence in the future.",
+  },
 ];
 
 export const links: LinkEntry[] = [
