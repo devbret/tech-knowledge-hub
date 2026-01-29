@@ -644,7 +644,7 @@ export const glossary: GlossaryEntry[] = [
   {
     term: "Memetics",
     definition:
-      "Memetics is the study of how ideas, behaviors, and cultural symbols (“memes”) spread, evolve, and compete within human culture in a manner analogous to biological evolution.",
+      "The study of how ideas, behaviors and cultural symbols spread, evolve and compete within human culture in a manner similar to biological evolution.",
     category: ["Other", "Biohacking"],
     source: "LessWrong",
     source_url: "https://www.lesswrong.com/w/memetics",
