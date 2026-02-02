@@ -651,6 +651,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...a key consideration is that an idea or memes ability to propagate in a given context, discussion, culture, or environment, is determined by its relative fitness in that environment, and this in turn determines its prevalence in the future.",
   },
+  {
+    term: "Mind Uploading",
+    definition:
+      "The process of transferring or copying a human mind into a digital or artificial substrate, such as a computer or simulated environment.",
+    category: ["Biohacking"],
+    source: "L'Atelier",
+    source_url: "https://atelier.net/ve-tech-radar/tech-radar/mind-upload",
+    quote:
+      "Mind uploading would enable a person's presence in virtual and “real” life 24/7. It could also bring a form of immortality as the “mind” replica could stay in a virtual environment even after a person's death.",
+  },
 ];
 
 export const links: LinkEntry[] = [
