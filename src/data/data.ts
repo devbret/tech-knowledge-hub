@@ -661,6 +661,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Mind uploading would enable a person's presence in virtual and “real” life 24/7. It could also bring a form of immortality as the “mind” replica could stay in a virtual environment even after a person's death.",
   },
+  {
+    term: "Webhook",
+    definition:
+      "A way for one system to automatically send real-time data to another system when a specific event happens, using an HTTP request.",
+    category: ["Programming", "AI"],
+    source: "Zapier",
+    source_url: "https://zapier.com/blog/what-are-webhooks/#what",
+    quote:
+      "Webhooks are automated messages sent from apps when something happens. [...] Webhooks are usually used to connect apps and systems, allowing them to share real-time data.",
+  },
 ];
 
 export const links: LinkEntry[] = [
