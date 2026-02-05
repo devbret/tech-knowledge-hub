@@ -671,6 +671,17 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "Webhooks are automated messages sent from apps when something happens. [...] Webhooks are usually used to connect apps and systems, allowing them to share real-time data.",
   },
+  {
+    term: "LEV",
+    definition:
+      "Longevity Escape Velocity is the point at which advances in medicine and biotechnology extend human life faster than aging progresses.",
+    category: ["Biohacking", "Other"],
+    source: "Popular Mechanics",
+    source_url:
+      "https://www.popularmechanics.com/science/a69287395/humans-will-go-backwards-in-time/",
+    quote:
+      "...it’s basically the idea that as our life extension technology gets better, our life expectancy could increase by more than we age over a set period of time.",
+  },
 ];
 
 export const links: LinkEntry[] = [
