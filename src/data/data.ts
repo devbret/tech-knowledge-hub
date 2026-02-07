@@ -682,6 +682,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...it’s basically the idea that as our life extension technology gets better, our life expectancy could increase by more than we age over a set period of time.",
   },
+  {
+    term: "Music",
+    definition:
+      "The intentional organization of sound in time to express, evoke or explore human experience.",
+    category: ["Music", "Audio", "Other"],
+    source: "Cambridge English Dictionary",
+    source_url: "https://dictionary.cambridge.org/us/dictionary/english/music",
+    quote:
+      "A pattern of sounds made by musical instruments, voices, or computers, or a combination of these, intended to give pleasure to people listening to it.",
+  },
 ];
 
 export const links: LinkEntry[] = [
