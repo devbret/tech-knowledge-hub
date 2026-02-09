@@ -692,6 +692,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "A pattern of sounds made by musical instruments, voices, or computers, or a combination of these, intended to give pleasure to people listening to it.",
   },
+  {
+    term: "Preterhuman",
+    definition:
+      "Something that goes beyond or precedes what is considered normal human ability, capacity or nature.",
+    category: ["Biohacking", "Other"],
+    source: "Collins English Dictionary",
+    source_url:
+      "https://www.collinsdictionary.com/us/dictionary/english/preterhuman",
+    quote: "Beyond that which is human.",
+  },
 ];
 
 export const links: LinkEntry[] = [
