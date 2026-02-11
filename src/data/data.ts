@@ -702,6 +702,16 @@ export const glossary: GlossaryEntry[] = [
       "https://www.collinsdictionary.com/us/dictionary/english/preterhuman",
     quote: "Beyond that which is human.",
   },
+  {
+    term: "Cognitive Liberty",
+    definition:
+      "The fundamental right of individuals to control their own mental processes, consciousness and brain activity, free from coercive interference or unauthorized manipulation.",
+    category: ["Biohacking"],
+    source: "Stimpunks",
+    source_url: "https://stimpunks.org/glossary/cognitive-liberty/",
+    quote:
+      "...was coined by Wrye Sententia and Richard Glen Boire, the founders of the Center for Cognitive Liberty and Ethics. Cognitive liberty [...] boils down to the idea that individuals have the right to absolute sovereignty over their own brains and their own cognitive processes.",
+  },
 ];
 
 export const links: LinkEntry[] = [
