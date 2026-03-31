@@ -18,7 +18,7 @@ Below are the required software programs and instructions for installing and usi
 
 - [Git](https://git-scm.com/downloads)
 
-- [Python](https://www.python.org/downloads/)
+- [Node.js](https://nodejs.org/en)
 
 ### Steps
 
