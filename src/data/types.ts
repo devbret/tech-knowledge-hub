@@ -1,18 +1,23 @@
-export type Category =
-  | "OSINT"
-  | "AI"
-  | "Video Games"
-  | "FOSS"
-  | "Programming"
-  | "Audio"
-  | "Cybersecurity"
-  | "Music"
-  | "Other"
-  | "OPSEC"
-  | "Hardware"
-  | "Biohacking"
-  | "Blockchain"
-  | "DevOps";
+const CATEGORIES = [
+  "OSINT",
+  "AI",
+  "Video Games",
+  "FOSS",
+  "Programming",
+  "Audio",
+  "OPSEC",
+  "Music",
+  "Cybersecurity",
+  "Other",
+  "Hardware",
+  "Biohacking",
+  "Blockchain",
+  "DevOps",
+] as const;
+
+export type Category = (typeof CATEGORIES)[number];
+
+export const ALL_CATEGORIES: Category[] = [...CATEGORIES];
 
 export interface GlossaryEntry {
   term: string;

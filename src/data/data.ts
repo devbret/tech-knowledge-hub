@@ -1,21 +1,6 @@
-import type { GlossaryEntry, LinkEntry, Category } from "./types";
+import type { GlossaryEntry, LinkEntry } from "./types";
 
-export const ALL_CATEGORIES: Category[] = [
-  "OSINT",
-  "AI",
-  "Video Games",
-  "FOSS",
-  "Programming",
-  "Audio",
-  "OPSEC",
-  "Music",
-  "Cybersecurity",
-  "Other",
-  "Hardware",
-  "Biohacking",
-  "Blockchain",
-  "DevOps",
-];
+export { ALL_CATEGORIES } from "./types";
 
 export const glossary: GlossaryEntry[] = [
   {

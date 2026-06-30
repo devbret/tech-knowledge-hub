@@ -4,14 +4,14 @@ type WithMaybeCategory = { category?: Category[] | null };
 
 export function buildCategoryMatrix(
   items: WithMaybeCategory[],
-  categories: Category[]
+  categories: Category[],
 ) {
   const index = new Map<Category, number>();
   categories.forEach((c, i) => index.set(c, i));
 
   const n = categories.length;
   const matrix: number[][] = Array.from({ length: n }, () =>
-    Array.from({ length: n }, () => 0)
+    Array.from({ length: n }, () => 0),
   );
 
   for (const item of items) {
