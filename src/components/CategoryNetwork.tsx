@@ -1,28 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import * as d3 from "d3";
+import { select } from "d3-selection";
+import { zoom, type D3ZoomEvent } from "d3-zoom";
+import {
+  forceSimulation,
+  forceLink,
+  forceManyBody,
+  forceCenter,
+  forceCollide,
+} from "d3-force";
+import { drag } from "d3-drag";
+import { color as d3color } from "d3-color";
+import "d3-transition";
 import type { Category, GlossaryEntry, LinkEntry } from "../data/types";
+import { elem, metaLine } from "../utils/dom";
 
 type Props = {
   glossary: GlossaryEntry[];
   links: LinkEntry[];
   height?: number;
-};
-
-const CATEGORY_COLORS: Partial<Record<Category, string>> = {
-  OSINT: "#3b82f6",
-  AI: "#a855f7",
-  "Video Games": "#f97316",
-  FOSS: "#10b981",
-  Programming: "#06b6d4",
-  Audio: "#ef4444",
-  Music: "#e879f9",
-  Other: "#9ca3af",
-  OPSEC: "#f59e0b",
-  Hardware: "#22c55e",
-  Biohacking: "#8b5cf6",
-  Blockchain: "#7c3aed",
-  Cybersecurity: "#0ea5e9",
-  DevOps: "#6366f1",
 };
 
 type NodeKind = "category" | "glossary" | "link";
@@ -58,6 +53,73 @@ function slugify(s: string) {
     .replace(/(^-|-$)/g, "");
 }
 
+function endpointId(end: string | GraphNode) {
+  return typeof end === "string" ? end : end.id;
+}
+
+function tooltipBody(text: string): HTMLElement {
+  const node = elem("div", "", [text]);
+  node.style.maxWidth = "360px";
+  node.style.lineHeight = "1.25";
+  return node;
+}
+
+function buildNetworkTooltip(
+  d: GraphNode,
+  simLinks: GraphLink[],
+  nodeById: Map<string, GraphNode>,
+): DocumentFragment {
+  const frag = document.createDocumentFragment();
+
+  if (d.kind === "category" && d.category) {
+    const members = simLinks
+      .filter((l) => endpointId(l.target) === d.id)
+      .map((l) => nodeById.get(endpointId(l.source)))
+      .filter((n): n is GraphNode => Boolean(n));
+
+    frag.append(elem("div", "chord-tooltip__title", [d.label]));
+    frag.append(metaLine("Items in category:", String(members.length)));
+    frag.append(elem("div", "chord-tooltip__sub", ["Examples"]));
+
+    const list = elem("div", "chord-tooltip__list");
+    if (members.length) {
+      for (const n of members.slice(0, 8)) {
+        list.append(
+          elem("div", "chord-tooltip__row", [
+            elem("span", "chord-tooltip__cat", [n.label]),
+            elem("span", "chord-tooltip__val", [n.kind]),
+          ]),
+        );
+      }
+    } else {
+      list.append(elem("div", "muted", ["No items."]));
+    }
+    frag.append(list);
+  } else if (d.kind === "glossary" && d.glossary) {
+    frag.append(elem("div", "chord-tooltip__title", [d.glossary.term]));
+    frag.append(metaLine("Type:", "Glossary"));
+    frag.append(
+      metaLine("Categories:", (d.glossary.category ?? []).join(", ")),
+    );
+    frag.append(elem("div", "chord-tooltip__sub", ["Definition"]));
+    frag.append(
+      elem("div", "chord-tooltip__list", [tooltipBody(d.glossary.definition)]),
+    );
+  } else if (d.kind === "link" && d.link) {
+    frag.append(elem("div", "chord-tooltip__title", [d.link.title]));
+    frag.append(metaLine("Type:", "Link"));
+    frag.append(metaLine("Categories:", (d.link.category ?? []).join(", ")));
+    frag.append(elem("div", "chord-tooltip__sub", ["Description"]));
+    frag.append(
+      elem("div", "chord-tooltip__list", [
+        tooltipBody(d.link.description ?? ""),
+      ]),
+    );
+  }
+
+  return frag;
+}
+
 export default function CategoryNetwork({ glossary, links, height }: Props) {
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -83,10 +145,10 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
 
     const allCategories = new Set<Category>();
     glossary.forEach((g) =>
-      getCats(g.category).forEach((c) => allCategories.add(c))
+      getCats(g.category).forEach((c) => allCategories.add(c)),
     );
     links.forEach((l) =>
-      getCats(l.category).forEach((c) => allCategories.add(c))
+      getCats(l.category).forEach((c) => allCategories.add(c)),
     );
 
     const categoryNodes: GraphNode[] = Array.from(allCategories).map((c) => ({
@@ -134,17 +196,14 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
 
     const nodes = [...categoryNodes, ...glossaryNodes, ...linkNodes];
 
-    const color = (cat?: Category) =>
-      cat ? CATEGORY_COLORS[cat] ?? "#94a3b8" : "#94a3b8";
-
-    return { nodes, links: edgeList, color };
+    return { nodes, links: edgeList };
   }, [glossary, links]);
 
   useEffect(() => {
     if (!svgRef.current) return;
     if (size.w === 0 || size.h === 0) return;
 
-    const svg = d3.select(svgRef.current);
+    const svg = select(svgRef.current);
     svg.selectAll("*").remove();
 
     const tooltipEl = tooltipRef.current;
@@ -167,22 +226,21 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
     const gNodes = zoomRoot.append("g").attr("class", "nodes");
     const gLabels = zoomRoot.append("g").attr("class", "labels");
 
-    const zoom = d3
-      .zoom<SVGSVGElement, unknown>()
+    const zoomBehavior = zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.25, 3.5])
       .on("zoom", (evt) => {
         zoomRoot.attr("transform", evt.transform.toString());
       });
 
     svg.call(
-      zoom.filter((event: d3.D3ZoomEvent<SVGSVGElement, unknown>) => {
+      zoomBehavior.filter((event: D3ZoomEvent<SVGSVGElement, unknown>) => {
         if (event.type === "wheel") return true;
 
         const target = event.sourceEvent?.target;
         if (!(target instanceof Element)) return true;
 
         return !target.closest("circle");
-      })
+      }),
     );
 
     function positionTooltip(evt: MouseEvent) {
@@ -196,23 +254,21 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
     const simLinks: GraphLink[] = graph.links.map((l) => ({ ...l }));
     const nodeById = new Map(nodes.map((n) => [n.id, n]));
 
-    const sim = d3
-      .forceSimulation<GraphNode>(nodes)
+    const sim = forceSimulation<GraphNode>(nodes)
       .force(
         "link",
-        d3
-          .forceLink<GraphNode, GraphLink>(simLinks)
+        forceLink<GraphNode, GraphLink>(simLinks)
           .id((d) => d.id)
           .distance(() => 95)
-          .strength(0.95)
+          .strength(0.95),
       )
-      .force("charge", d3.forceManyBody().strength(-230))
-      .force("center", d3.forceCenter(w / 2, h / 2))
+      .force("charge", forceManyBody().strength(-230))
+      .force("center", forceCenter(w / 2, h / 2))
       .force(
         "collide",
-        d3
-          .forceCollide<GraphNode>()
-          .radius((d) => (d.kind === "category" ? 26 : 18))
+        forceCollide<GraphNode>().radius((d) =>
+          d.kind === "category" ? 26 : 18,
+        ),
       );
 
     const linkSel = gLinks
@@ -242,10 +298,10 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
           d.kind === "category"
             ? CATEGORY_NODE_COLOR
             : d.kind === "glossary"
-            ? GLOSSARY_COLOR
-            : LINK_COLOR;
+              ? GLOSSARY_COLOR
+              : LINK_COLOR;
 
-        const c = d3.color(base);
+        const c = d3color(base);
         return c ? c.darker(0.9).formatHex() : "#0f172a";
       })
       .attr("stroke-width", 1.5)
@@ -298,72 +354,7 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
           .attr("opacity", (n) => (neighborhood.has(n.id) ? 1 : 0.15));
 
         if (tooltipEl) {
-          if (d.kind === "category" && d.category) {
-            const members = simLinks
-              .filter((l) => {
-                const t = typeof l.target === "string" ? l.target : l.target.id;
-                return t === d.id;
-              })
-              .map((l) => {
-                const s = typeof l.source === "string" ? l.source : l.source.id;
-                return nodeById.get(s);
-              })
-              .filter(Boolean) as GraphNode[];
-
-            tooltipEl.innerHTML = `
-              <div class="chord-tooltip__title">${d.label}</div>
-              <div class="chord-tooltip__meta">Items in category: <b>${
-                members.length
-              }</b></div>
-              <div class="chord-tooltip__sub">Examples</div>
-              <div class="chord-tooltip__list">
-                ${
-                  members.length
-                    ? members
-                        .slice(0, 8)
-                        .map(
-                          (n) => `
-                            <div class="chord-tooltip__row">
-                              <span class="chord-tooltip__cat">${n.label}</span>
-                              <span class="chord-tooltip__val">${n.kind}</span>
-                            </div>
-                          `
-                        )
-                        .join("")
-                    : `<div class="muted">No items.</div>`
-                }
-              </div>
-            `;
-          } else if (d.kind === "glossary" && d.glossary) {
-            tooltipEl.innerHTML = `
-              <div class="chord-tooltip__title">${d.glossary.term}</div>
-              <div class="chord-tooltip__meta">Type: <b>Glossary</b></div>
-              <div class="chord-tooltip__meta">Categories: <b>${(
-                d.glossary.category ?? []
-              ).join(", ")}</b></div>
-              <div class="chord-tooltip__sub">Definition</div>
-              <div class="chord-tooltip__list">
-                <div style="max-width: 360px; line-height: 1.25;">
-                  ${d.glossary.definition}
-                </div>
-              </div>
-            `;
-          } else if (d.kind === "link" && d.link) {
-            tooltipEl.innerHTML = `
-              <div class="chord-tooltip__title">${d.link.title}</div>
-              <div class="chord-tooltip__meta">Type: <b>Link</b></div>
-              <div class="chord-tooltip__meta">Categories: <b>${(
-                d.link.category ?? []
-              ).join(", ")}</b></div>
-              <div class="chord-tooltip__sub">Description</div>
-              <div class="chord-tooltip__list">
-                <div style="max-width: 360px; line-height: 1.25;">
-                  ${d.link.description ?? ""}
-                </div>
-              </div>
-            `;
-          }
-
+          tooltipEl.replaceChildren(buildNetworkTooltip(d, simLinks, nodeById));
           tooltipEl.style.opacity = "1";
           positionTooltip(evt);
         }
@@ -391,12 +382,11 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
           tooltipEl.style.opacity = "0";
           tooltipEl.style.left = "-9999px";
           tooltipEl.style.top = "-9999px";
-          tooltipEl.innerHTML = "";
+          tooltipEl.replaceChildren();
         }
       });
 
-    const drag = d3
-      .drag<SVGCircleElement, GraphNode>()
+    const dragBehavior = drag<SVGCircleElement, GraphNode>()
       .on("start", (evt, d) => {
         evt.sourceEvent?.stopPropagation?.();
         if (!evt.active) sim.alphaTarget(0.3).restart();
@@ -415,29 +405,29 @@ export default function CategoryNetwork({ glossary, links, height }: Props) {
         d.fy = null;
       });
 
-    nodeSel.call(drag);
+    nodeSel.call(dragBehavior);
 
     sim.on("tick", () => {
       linkSel
         .attr("x1", (d) =>
           typeof d.source === "string"
-            ? nodeById.get(d.source)?.x ?? 0
-            : d.source.x ?? 0
+            ? (nodeById.get(d.source)?.x ?? 0)
+            : (d.source.x ?? 0),
         )
         .attr("y1", (d) =>
           typeof d.source === "string"
-            ? nodeById.get(d.source)?.y ?? 0
-            : d.source.y ?? 0
+            ? (nodeById.get(d.source)?.y ?? 0)
+            : (d.source.y ?? 0),
         )
         .attr("x2", (d) =>
           typeof d.target === "string"
-            ? nodeById.get(d.target)?.x ?? 0
-            : d.target.x ?? 0
+            ? (nodeById.get(d.target)?.x ?? 0)
+            : (d.target.x ?? 0),
         )
         .attr("y2", (d) =>
           typeof d.target === "string"
-            ? nodeById.get(d.target)?.y ?? 0
-            : d.target.y ?? 0
+            ? (nodeById.get(d.target)?.y ?? 0)
+            : (d.target.y ?? 0),
         );
 
       nodeSel.attr("cx", (d) => d.x ?? 0).attr("cy", (d) => d.y ?? 0);

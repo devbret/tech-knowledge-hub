@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import TagFilter from "./components/TagFilter";
@@ -7,20 +7,26 @@ import LinkList from "./components/LinkList";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import { buildCategoryMatrix } from "./utils/buildCategoryMatrix";
-import CategoryChord from "./components/CategoryChord";
-import CategoryNetwork from "./components/CategoryNetwork";
 import { ALL_CATEGORIES, glossary, links } from "./data/data";
 import type { Category } from "./data/types";
 import "./styles/App.css";
 
-export default function App() {
-  const [query, setQuery] = useState("");
-  const [activeCats, setActiveCats] = useState<Set<Category>>(new Set());
-  const [showChord, setShowChord] = useState(false);
-  const [showNetwork, setShowNetwork] = useState(false);
+const CategoryChord = lazy(() => import("./components/CategoryChord"));
+const CategoryNetwork = lazy(() => import("./components/CategoryNetwork"));
 
-  const allItems = [...glossary, ...links];
-  const { matrix, categories } = buildCategoryMatrix(allItems, ALL_CATEGORIES);
+type View = "main" | "chord" | "network";
+
+export default function App() {
+  const [query, setQuery] = useState(
+    () => localStorage.getItem("tkh:query") ?? ""
+  );
+  const [activeCats, setActiveCats] = useState<Set<Category>>(new Set());
+  const [view, setView] = useState<View>("main");
+
+  const { matrix, categories } = useMemo(
+    () => buildCategoryMatrix([...glossary, ...links], ALL_CATEGORIES),
+    []
+  );
 
   const toggleCat = (c: Category) =>
     setActiveCats((prev) => {
@@ -35,48 +41,47 @@ export default function App() {
 
   const clearCats = () => setActiveCats(new Set());
 
-  useMemo(() => {
-    const stored = localStorage.getItem("tkh:query");
-    if (stored) setQuery(stored);
-  }, []);
-
-  useMemo(() => {
+  useEffect(() => {
     localStorage.setItem("tkh:query", query);
   }, [query]);
 
-  if (showChord) {
+  if (view === "chord") {
     return (
       <div className="app chord-page">
         <header className="chord-page__header">
           <button
             className="chord-page__close-btn"
-            onClick={() => setShowChord(false)}
+            onClick={() => setView("main")}
           >
             Close Chord Graph
           </button>
         </header>
 
         <main className="chord-page__main">
-          <CategoryChord matrix={matrix} categories={categories} />
+          <Suspense fallback={<p className="muted">Loading graph…</p>}>
+            <CategoryChord matrix={matrix} categories={categories} />
+          </Suspense>
         </main>
       </div>
     );
   }
 
-  if (showNetwork) {
+  if (view === "network") {
     return (
       <div className="app chord-page">
         <header className="chord-page__header">
           <button
             className="chord-page__close-btn"
-            onClick={() => setShowNetwork(false)}
+            onClick={() => setView("main")}
           >
             Close Network Graph
           </button>
         </header>
 
         <main className="chord-page__main">
-          <CategoryNetwork glossary={glossary} links={links} />
+          <Suspense fallback={<p className="muted">Loading graph…</p>}>
+            <CategoryNetwork glossary={glossary} links={links} />
+          </Suspense>
         </main>
       </div>
     );
@@ -99,22 +104,13 @@ export default function App() {
         />
 
         <div className="open-chord-wrap">
-          <button
-            className="open-chord-btn"
-            onClick={() => {
-              setShowNetwork(false);
-              setShowChord(true);
-            }}
-          >
+          <button className="open-chord-btn" onClick={() => setView("chord")}>
             Open Chord Graph
           </button>
 
           <button
             className="open-network-btn"
-            onClick={() => {
-              setShowChord(false);
-              setShowNetwork(true);
-            }}
+            onClick={() => setView("network")}
           >
             Open Network Graph
           </button>
