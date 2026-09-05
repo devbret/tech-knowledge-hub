@@ -1233,12 +1233,6 @@ export const links: LinkEntry[] = [
     category: ["AI", "Other"],
   },
   {
-    title: "FSF",
-    url: "https://www.fsf.org/",
-    description: `The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom.`,
-    category: ["Other", "FOSS"],
-  },
-  {
     title: "GNU OS",
     url: "https://www.gnu.org/home.en.html",
     description: `...an operating system that is free software—that is, it respects users' freedom.`,
