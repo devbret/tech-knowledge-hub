@@ -697,6 +697,16 @@ export const glossary: GlossaryEntry[] = [
     quote:
       "...was coined by Wrye Sententia and Richard Glen Boire, the founders of the Center for Cognitive Liberty and Ethics. Cognitive liberty [...] boils down to the idea that individuals have the right to absolute sovereignty over their own brains and their own cognitive processes.",
   },
+  {
+    term: "Mind Uploading",
+    definition:
+      "Scanning and copying a person's brain into a computer or other artificial substrate so their mind continues to exist and function outside their biological body.",
+    category: ["Biohacking"],
+    source: "Mind Uploading",
+    source_url: "https://minduploading.org/",
+    quote:
+      "Once it is possible to move a mind from one substrate to another, it is then called a substrate-independent mind (SIM). The concept of SIM is inspired by the idea of designing software that can run on multiple computers with different hardware without needing to be rewritten.",
+  },
 ];
 
 export const links: LinkEntry[] = [
@@ -1237,5 +1247,29 @@ export const links: LinkEntry[] = [
     url: "https://www.gnu.org/home.en.html",
     description: `...an operating system that is free software—that is, it respects users' freedom.`,
     category: ["Other", "FOSS"],
+  },
+  {
+    title: "Pixabay",
+    url: "https://pixabay.com/",
+    description: `Free stock photos, illustrations, vector graphics, videos, music and sounds effects, shared and enjoyed by one of the largest creator communities in the world.`,
+    category: ["Audio"],
+  },
+  {
+    title: "OpenAPI Initiative",
+    url: "https://www.openapis.org/",
+    description: `The OpenAPI Specifications provide a formal standard for describing HTTP APIs.`,
+    category: ["Programming"],
+  },
+  {
+    title: "Wireshark",
+    url: "https://www.wireshark.org/",
+    description: `Wireshark lets you dive deep into your network traffic - free and open source.`,
+    category: ["Cybersecurity", "FOSS"],
+  },
+  {
+    title: "METR",
+    url: "https://metr.org/",
+    description: `...evaluates frontier AI models to inform the public about their risks and capabilities.`,
+    category: ["AI", "Other"],
   },
 ];
