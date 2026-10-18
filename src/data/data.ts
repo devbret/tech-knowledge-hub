@@ -698,14 +698,25 @@ export const glossary: GlossaryEntry[] = [
       "...was coined by Wrye Sententia and Richard Glen Boire, the founders of the Center for Cognitive Liberty and Ethics. Cognitive liberty [...] boils down to the idea that individuals have the right to absolute sovereignty over their own brains and their own cognitive processes.",
   },
   {
-    term: "Mind Uploading",
+    term: "Digital Twin",
     definition:
-      "Scanning and copying a person's brain into a computer or other artificial substrate so their mind continues to exist and function outside their biological body.",
-    category: ["Biohacking"],
-    source: "Mind Uploading",
-    source_url: "https://minduploading.org/",
+      "A virtual model of a physical object, system, person or process that is continuously updated with real-world data so it can be used to monitor, simulate and predict how its real counterpart behaves.",
+    category: ["AI", "Programming"],
+    source: "Digital Twin Consortium",
+    source_url:
+      "https://www.digitaltwinconsortium.org/initiatives/the-definition-of-a-digital-twin/",
     quote:
-      "Once it is possible to move a mind from one substrate to another, it is then called a substrate-independent mind (SIM). The concept of SIM is inspired by the idea of designing software that can run on multiple computers with different hardware without needing to be rewritten.",
+      "A digital twin is an integrated data-driven virtual representation of real-world entities and processes, with synchronized interaction at a specified frequency and fidelity.",
+  },
+  {
+    term: "Distributed Ledger",
+    definition:
+      "A record of transactions copied across many computers rather than held by one authority, so no single party controls or can quietly alter it.",
+    category: ["Blockchain"],
+    source: "Investopedia",
+    source_url: "https://www.investopedia.com/terms/d/distributed-ledgers.asp",
+    quote:
+      "...a transaction database that is stored and synchronized across multiple sites, institutions, or geographies. Network nodes store copies of the ledger and communicate any changes made by users to other nodes, which append their ledgers to match.",
   },
 ];
 
